@@ -12,42 +12,23 @@ class CSVLogHandler(logging.Handler):
         self._ensure_log_directory_exists()  
         self._initialize_csv()  # Set up the CSV file with headers so it’s ready for logging.
 
-    # Why `_ensure_log_directory_exists`? 
-    # We need to guarantee the 'logs/' directory exists before writing the CSV file. Without this,
-    # attempting to write to a non-existent directory would raise an error. This method makes the
-    # logger robust and self-contained. Could we skip it? Yes, if we manually created the directory
-    # beforehand, but that’s less user-friendly and error-prone.
     def _ensure_log_directory_exists(self):
         """Ensure the 'logs/' directory exists and is writable, raising an error if it fails."""
         try:
-            # Why `self.log_file.parent.mkdir`? 
-            # `self.log_file` is a `Path` object (e.g., "logs/module_logs.csv"). The `.parent`
-            # attribute comes from `pathlib.Path` and gives us the directory part ("logs/").
-            # `mkdir(exist_ok=True)` creates the directory if it’s missing and does nothing if it
-            # already exists, avoiding unnecessary errors.
+
             self.log_file.parent.mkdir(exist_ok=True)
-            # Why test writability? 
-            # Creating a directory doesn’t guarantee we can write to it (e.g., due to permissions).
             # This test ensures the directory is usable.
             test_file = self.log_file.parent / "test_write.tmp"  # Create a temporary file path.
             with open(test_file, "w") as f:
-                f.write("test")  # Write something small to verify permissions.
-            test_file.unlink()  # Remove the test file to keep the directory clean.
+                f.write("test")  # Write to verify permissions.
+            test_file.unlink()  # Remove the test file
         except Exception as e:
-            raise RuntimeError(f"Failed to initialize logging directory: {e}")  # Inform the user if setup fails.
+            raise RuntimeError(f"Failed to initialize logging directory: {e}")
 
-    # Why `_initialize_csv`? 
-    # This clears the old log file (if it exists) and sets up headers. We do this to start fresh
-    # each time the logger is initialized, ensuring no stale data lingers and the CSV is properly
-    # structured from the start.
     def _initialize_csv(self):
         """Clear the CSV file if it exists and write the column headers."""
         try:
-            # How do we clear the CSV? 
-            # Opening the file in "w" (write) mode overwrites it completely, effectively clearing
-            # it. If the file didn’t exist, it’s created. This is simpler than checking for existence
-            # and deleting manually.
-            with open(self.log_file, mode="w", newline="") as file:  # "newline='' " avoids extra blank lines on Windows.
+            with open(self.log_file, mode="w", newline="") as file:  # rewrites over previous runs
                 writer = csv.writer(file)  # Use the CSV module to write rows cleanly.
                 # Why these headers? 
                 # They define the structure of our log data: timestamp, level, message, module, and
