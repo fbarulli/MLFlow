@@ -26,7 +26,7 @@ API_KEY = "fcf2e035cc53b836623ac91cccd8848d"
 
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
 logger.addHandler(console_handler)
@@ -42,4 +42,5 @@ class WeatherData(BaseModel):
 def log_to_csv(function_name: str,
                message : str,
                status : str) ->None:
-    '''Logs 
+    '''Logs to log_file in logs'''
+    
