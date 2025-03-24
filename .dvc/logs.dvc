@@ -1,0 +1,7 @@
+outs:
+- md5: 6d52a59300872e0f5f08a7bc3ec3ae7c.dir
+  path: ../logs/logs  
+  size: 0
+  nfiles: 1
+  hash: md5
+
