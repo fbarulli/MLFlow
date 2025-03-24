@@ -1,7 +1,7 @@
-# weather_api.py
+# src/weather_api.py
 import requests
 from typing import Dict
-from project_logger import setup_logger
+from ..logger.logger import setup_logger  
 
 logger = setup_logger()
 
