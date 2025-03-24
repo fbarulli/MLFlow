@@ -1,0 +1,6 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = https://dagshub.com/fbarulli/MLFlow.dvc
+    user = fbarulli
+    password = 7b3031147955b330e16d880234770678aaffc31c
