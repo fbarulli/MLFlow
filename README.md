@@ -8,7 +8,8 @@ This project combines MLflow, Airflow, and DVC for an end-to-end ML workflow.
 2. Run the setup script to create the environment and initialize Airflow:
 
 ```bash
-./setup_project.sh
+chmod +x setup_airflow.sh  
+
 ```
 
 ## Running Airflow
@@ -17,7 +18,7 @@ Start Airflow services (scheduler and webserver):
 
 ```bash
 conda activate mlflow
-./run_airflow.sh
+./setup_airflow.sh
 ```
 
 Access the Airflow UI at http://localhost:8080
@@ -27,7 +28,7 @@ Access the Airflow UI at http://localhost:8080
 Stop Airflow services:
 
 ```bash
-./stop_airflow.sh
+pkill -f "airflow scheduler" && pkill -f "airflow webserver"
 ```
 
 ## DVC Configuration

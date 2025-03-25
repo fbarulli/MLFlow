@@ -11,14 +11,21 @@ if [ ! -f "$PYTHON_EXECUTABLE" ]; then
         exit 1
     fi
 fi
+
+echo "Building Docker container for weather-collector:light..."
+docker build -t weather-collector:light .
+
 echo "Setting up Airflow in: $AIRFLOW_HOME"
 echo "Using Python: $PYTHON_EXECUTABLE"
 echo "Running Airflow setup..."
 "$PYTHON_EXECUTABLE" setup_airflow.py
+
 echo "Starting Airflow webserver..."
 "$PYTHON_EXECUTABLE" -m airflow webserver --port 8080 --hostname 0.0.0.0 &
+
 echo "Starting Airflow scheduler..."
 "$PYTHON_EXECUTABLE" -m airflow scheduler &
+
 echo "Airflow setup complete!"
 echo "Web GUI should be available at: http://localhost:8080"
 echo "Login with username: admin, password: admin"
