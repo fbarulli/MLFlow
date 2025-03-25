@@ -56,7 +56,7 @@ web_server_port = 8080
                    "--lastname", "User",
                    "--role", "Admin",
                    "--email", "admin@example.com",
-                   "--password", "admin123"],
+                   "--password", "admin"],
                   check=True,
                   env={"AIRFLOW_HOME": airflow_home})
 except Exception as e:

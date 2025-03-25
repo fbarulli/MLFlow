@@ -9,7 +9,6 @@ API_URL: str = "https://api.openweathermap.org/data/2.5/weather"
 API_KEY: str = "fcf2e035cc53b836623ac91cccd8848d"
 
 def fetch_weather_data(city: str, country: str) -> Dict:
-    """Fetch weather data for a given city and country."""
     try:
         query: str = f"{city},{country}"
         params: Dict[str, str] = {"q": query, "appid": API_KEY, "units": "metric"}
