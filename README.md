@@ -16,6 +16,8 @@ ps aux | grep airflow
 
 kill -9 $(ps aux | grep '[a]irflow' | awk '{print $2}')
 
+sudo pkill -9 gunicorn
+
 
 Start Scheduler:
 airflow scheduler &
