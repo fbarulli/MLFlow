@@ -13,7 +13,7 @@ logger = setup_logger()
 
 CITIES: List[str] = ["Paris", "London", "New York", "Berlin", "Tokyo"]
 COUNTRIES: List[str] = ["FR", "GB", "US", "DE", "JP"]
-OUTPUT_PATH: Path = Path("/home/ubuntu/MLFlow/data_storage/raw/weather.csv")
+OUTPUT_PATH: Path = Path("../../data_storage/raw/weather.csv")
 
 def to_weather_data(raw_data: Dict) -> Optional[WeatherData]:
     try:
