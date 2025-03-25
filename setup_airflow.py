@@ -22,12 +22,25 @@ if not (airflow_home / "airflow.cfg").exists():
     subprocess.run(["airflow", "db", "migrate"], check=True)
     subprocess.run(["airflow", "connections", "create-default-connections"], check=True)
 
+subprocess.run([
+    "airflow", "users", "create",
+    "--username", "admin",
+    "--firstname", "Admin",
+    "--lastname", "Admin",
+    "--role", "Admin",
+    "--email", "admin@example.com",
+    "--password", "admin"
+], input="admin\n", text=True, check=True)
+
 with open(airflow_home / "airflow.cfg", "r") as f:
     config = f.read()
 
 config = config.replace(
     f"dags_folder = {airflow_home}/dags",
-    f"dags_folder = {dags_folder}"
+    "dags_folder = ./dags"
+).replace(
+    "load_examples = True",
+    "load_examples = False"
 )
 
 with open(airflow_home / "airflow.cfg", "w") as f:
