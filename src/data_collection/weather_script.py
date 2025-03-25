@@ -6,14 +6,13 @@ from tqdm import tqdm
 from ..data_class.data_class import WeatherData
 from .weather_api import fetch_weather_data
 from pathlib import Path
-import subprocess
 from datetime import datetime, UTC
 
 logger = setup_logger()
 
 CITIES: List[str] = ["Paris", "London", "New York", "Berlin", "Tokyo"]
 COUNTRIES: List[str] = ["FR", "GB", "US", "DE", "JP"]
-OUTPUT_PATH: Path = Path("/data_storage/raw/weather.csv")
+OUTPUT_PATH: Path = Path("/data/weather.csv")
 
 def to_weather_data(raw_data: Dict) -> Optional[WeatherData]:
     try:
@@ -54,10 +53,8 @@ def process_weather_data(cities: List[str] = CITIES, countries: List[str] = COUN
         OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
         df.to_csv(OUTPUT_PATH, mode='a', header=not OUTPUT_PATH.exists(), index=False)
         logger.info(f"Data appended to {OUTPUT_PATH}")
-        subprocess.run(["dvc", "add", str(OUTPUT_PATH)], check=True, cwd="/app")
-        logger.info(f"Added {OUTPUT_PATH} to DVC tracking")
-    except (PermissionError, FileNotFoundError, subprocess.CalledProcessError) as e:
-        logger.error(f"Failed during file operation or DVC add: {str(e)}", exc_info=True)
+    except (PermissionError, FileNotFoundError) as e:
+        logger.error(f"Failed during file operation: {str(e)}", exc_info=True)
         raise
     logger.info("Weather data processing completed")
     return df

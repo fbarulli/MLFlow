@@ -21,4 +21,4 @@ echo "Starting Airflow scheduler..."
 "$PYTHON_EXECUTABLE" -m airflow scheduler &
 echo "Airflow setup complete!"
 echo "Web GUI should be available at: http://localhost:8080"
-echo "Login with username: admin, password: admin123"
+echo "Login with username: admin, password: admin"

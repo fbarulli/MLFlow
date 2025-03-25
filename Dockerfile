@@ -1,12 +1,11 @@
 # Dockerfile
-FROM python:3.12-alpine
+FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN apk add --no-cache gcc musl-dev linux-headers && \
-    pip install --no-cache-dir -r requirements.txt && \
-    apk del gcc musl-dev linux-headers
+RUN apt-get update && apt-get install -y && \
+    pip install --no-cache-dir pandas requests tqdm pydantic && \
+    apt-get clean
 
 COPY src/ src/
 

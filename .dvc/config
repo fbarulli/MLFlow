@@ -1,5 +1,6 @@
 [core]
     remote = myremote
+    autostage = true
 ['remote "myremote"']
     url = https://dagshub.com/fbarulli/MLFlow.dvc
     user = fbarulli
