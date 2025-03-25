@@ -47,7 +47,6 @@ with DAG(
 
     version_data = BashOperator(
         task_id='version_data',
-        bash_command=f'cd {project_root} && dvc add data_storage/raw/weather.csv && dvc push && git add data_storage/raw/weather.csv.dvc && git commit -m "Update weather data" && git push',
-    )
+        bash_command=f'cd {project_root} && dvc add data_storage/raw/weather.csv && dvc push && git add data_storage/raw/weather.csv.dvc && git commit -m "Update weather data" --allow-empty && git push',    )
 
     clean_logs >> collect_weather >> version_data

@@ -1,0 +1,24 @@
+[2025-03-25T17:18:12.461+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-25T17:18:12.477+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_collection.version_data scheduled__2025-03-25T17:17:00+00:00 [queued]>
+[2025-03-25T17:18:12.486+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_collection.version_data scheduled__2025-03-25T17:17:00+00:00 [queued]>
+[2025-03-25T17:18:12.486+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-25T17:18:12.506+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): version_data> on 2025-03-25 17:17:00+00:00
+[2025-03-25T17:18:12.511+0000] {standard_task_runner.py:72} INFO - Started process 32162 to run task
+[2025-03-25T17:18:12.520+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'weather_data_collection', 'version_data', 'scheduled__2025-03-25T17:17:00+00:00', '--job-id', '420', '--raw', '--subdir', '/home/ubuntu/MLFlow/dags/weather_dag.py', '--cfg-path', '/tmp/tmpvw3gsh6g']
+[2025-03-25T17:18:12.522+0000] {standard_task_runner.py:105} INFO - Job 420: Subtask version_data
+[2025-03-25T17:18:12.578+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_data_collection.version_data scheduled__2025-03-25T17:17:00+00:00 [running]> on host ip-172-31-43-252.eu-west-1.compute.internal
+[2025-03-25T17:18:12.671+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='weather_data_collection' AIRFLOW_CTX_TASK_ID='version_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-25T17:17:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-25T17:17:00+00:00'
+[2025-03-25T17:18:12.672+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-25T17:18:12.688+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-25T17:18:12.689+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /home/ubuntu/MLFlow && dvc add data_storage/raw/weather.csv && dvc push && git add data_storage/raw/weather.csv.dvc && git commit -m "Update weather data" --allow-empty && git push']
+[2025-03-25T17:18:12.704+0000] {subprocess.py:99} INFO - Output:
+[2025-03-25T17:18:16.584+0000] {subprocess.py:106} INFO - 2 files pushed
+[2025-03-25T17:18:16.891+0000] {subprocess.py:106} INFO - [main 3263f2f] Update weather data
+[2025-03-25T17:18:17.830+0000] {subprocess.py:106} INFO - To https://github.com/fbarulli/MLFlow
+[2025-03-25T17:18:17.830+0000] {subprocess.py:106} INFO -    8e00cb0..3263f2f  main -> main
+[2025-03-25T17:18:17.834+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-03-25T17:18:17.862+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-25T17:18:17.863+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=weather_data_collection, task_id=version_data, run_id=scheduled__2025-03-25T17:17:00+00:00, execution_date=20250325T171700, start_date=20250325T171812, end_date=20250325T171817
+[2025-03-25T17:18:17.903+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-25T17:18:17.922+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-25T17:18:17.922+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
