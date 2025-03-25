@@ -6,6 +6,8 @@ from tqdm import tqdm
 from ..data_class.data_class import WeatherData
 from .weather_api import fetch_weather_data
 from pathlib import Path
+import subprocess
+from datetime import datetime
 
 logger = setup_logger()
 
@@ -44,19 +46,22 @@ def process_weather_data(cities: List[str] = CITIES, countries: List[str] = COUN
     logger.debug("Converting parsed data to DataFrame")
     df_expanded: pd.DataFrame = pd.DataFrame([obj.model_dump() if obj else {} for obj in weather_objects])
     df = pd.concat([df[["city", "country"]], df_expanded], axis=1)
+    df["datetime"] = datetime.utcnow().isoformat()
     logger.info(f"DataFrame shape: {df.shape}")
     na_counts = df.isna().sum().to_dict()
     logger.info(f"NA counts per column: {na_counts}")
     try:
         OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-        df.to_csv(OUTPUT_PATH, index=False)
-        logger.info(f"Data saved to {OUTPUT_PATH}")
-    except (PermissionError, FileNotFoundError) as e:
-        logger.error(f"Failed to save data to {OUTPUT_PATH}: {str(e)}", exc_info=True)
+        df.to_csv(OUTPUT_PATH, mode='a', header=not OUTPUT_PATH.exists(), index=False)
+        logger.info(f"Data appended to {OUTPUT_PATH}")
+        subprocess.run(["dvc", "add", str(OUTPUT_PATH)], check=True)
+        logger.info(f"Added {OUTPUT_PATH} to DVC tracking")
+    except (PermissionError, FileNotFoundError, subprocess.CalledProcessError) as e:
+        logger.error(f"Failed during file operation or DVC add: {str(e)}", exc_info=True)
         raise
     logger.info("Weather data processing completed")
     return df
 
 if __name__ == "__main__":
     result_df = process_weather_data()
-    
+    result_df.head()
