@@ -1,2 +1,4 @@
-logs/logs/
-/outputs/*/
+/raw/*
+!data_storage/raw/
+!data_storage/raw/weather.csv
+!data_storage/raw/*.dvc
