@@ -1,0 +1,71 @@
+[2025-03-25T12:46:14.553+0000] {processor.py:186} INFO - Started process (PID=25821) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:46:14.554+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:46:14.557+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.556+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:46:14.575+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:46:14.761+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.760+0000] {override.py:1930} INFO - Created Permission View: can edit on DAG:weather_data_collection
+[2025-03-25T12:46:14.797+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.796+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG:weather_data_collection
+[2025-03-25T12:46:14.819+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.819+0000] {override.py:1930} INFO - Created Permission View: can read on DAG:weather_data_collection
+[2025-03-25T12:46:14.878+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.878+0000] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:weather_data_collection
+[2025-03-25T12:46:14.904+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.903+0000] {override.py:1930} INFO - Created Permission View: can create on DAG Run:weather_data_collection
+[2025-03-25T12:46:14.928+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.928+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:weather_data_collection
+[2025-03-25T12:46:14.948+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.948+0000] {override.py:1930} INFO - Created Permission View: can read on DAG Run:weather_data_collection
+[2025-03-25T12:46:14.949+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.949+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:46:14.969+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.969+0000] {dag.py:3262} INFO - Creating ORM DAG for weather_data_collection
+[2025-03-25T12:46:14.989+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:14.989+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:45:00+00:00, run_after=2025-03-25 12:46:00+00:00
+[2025-03-25T12:46:15.036+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.488 seconds
+[2025-03-25T12:46:45.994+0000] {processor.py:186} INFO - Started process (PID=25897) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:46:45.995+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:46:45.997+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:45.996+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:46:46.013+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:46:46.035+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:46.035+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:46:46.060+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:46:46.059+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:45:00+00:00, run_after=2025-03-25 12:46:00+00:00
+[2025-03-25T12:46:46.083+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.100 seconds
+[2025-03-25T12:47:16.299+0000] {processor.py:186} INFO - Started process (PID=25956) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:47:16.300+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:47:16.302+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:47:16.302+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:47:16.317+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:47:16.337+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:47:16.337+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:47:16.360+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:47:16.360+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:46:00+00:00, run_after=2025-03-25 12:47:00+00:00
+[2025-03-25T12:47:16.387+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.094 seconds
+[2025-03-25T12:47:46.571+0000] {processor.py:186} INFO - Started process (PID=26009) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:47:46.572+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:47:46.573+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:47:46.573+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:47:46.587+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:47:46.606+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:47:46.606+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:47:46.629+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:47:46.629+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:46:00+00:00, run_after=2025-03-25 12:47:00+00:00
+[2025-03-25T12:47:46.655+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.089 seconds
+[2025-03-25T12:48:16.854+0000] {processor.py:186} INFO - Started process (PID=26056) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:48:16.855+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:48:16.857+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:48:16.857+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:48:16.871+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:48:16.891+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:48:16.891+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:48:16.917+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:48:16.916+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:47:00+00:00, run_after=2025-03-25 12:48:00+00:00
+[2025-03-25T12:48:16.947+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.098 seconds
+[2025-03-25T12:48:47.141+0000] {processor.py:186} INFO - Started process (PID=26093) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:48:47.142+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:48:47.143+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:48:47.143+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:48:47.157+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:48:47.177+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:48:47.177+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:48:47.202+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:48:47.201+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:47:00+00:00, run_after=2025-03-25 12:48:00+00:00
+[2025-03-25T12:48:47.226+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.090 seconds
+[2025-03-25T12:49:17.428+0000] {processor.py:186} INFO - Started process (PID=26103) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:49:17.429+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:49:17.432+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:49:17.431+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:49:17.447+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:49:17.467+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:49:17.467+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:49:17.492+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:49:17.492+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:48:00+00:00, run_after=2025-03-25 12:49:00+00:00
+[2025-03-25T12:49:17.521+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.100 seconds
+[2025-03-25T12:49:47.717+0000] {processor.py:186} INFO - Started process (PID=26127) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:49:47.718+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:49:47.720+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:49:47.720+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:49:47.736+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:49:47.756+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:49:47.756+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:49:47.785+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:49:47.785+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:48:00+00:00, run_after=2025-03-25 12:49:00+00:00
+[2025-03-25T12:49:47.811+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.101 seconds
+[2025-03-25T12:50:17.985+0000] {processor.py:186} INFO - Started process (PID=26133) to work on /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:50:17.986+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/weather_dag.py for tasks to queue
+[2025-03-25T12:50:17.988+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:50:17.988+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:50:18.002+0000] {processor.py:925} INFO - DAG(s) 'weather_data_collection' retrieved from /home/ubuntu/MLFlow/dags/weather_dag.py
+[2025-03-25T12:50:18.022+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:50:18.022+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-25T12:50:18.046+0000] {logging_mixin.py:190} INFO - [2025-03-25T12:50:18.046+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_data_collection to 2025-03-25 12:49:00+00:00, run_after=2025-03-25 12:50:00+00:00
+[2025-03-25T12:50:18.069+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/weather_dag.py took 0.089 seconds
