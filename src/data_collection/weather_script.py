@@ -7,7 +7,7 @@ from ..data_class.data_class import WeatherData
 from .weather_api import fetch_weather_data
 from pathlib import Path
 import subprocess
-from datetime import datetime
+from datetime import datetime, UTC
 
 logger = setup_logger()
 
@@ -46,7 +46,7 @@ def process_weather_data(cities: List[str] = CITIES, countries: List[str] = COUN
     logger.debug("Converting parsed data to DataFrame")
     df_expanded: pd.DataFrame = pd.DataFrame([obj.model_dump() if obj else {} for obj in weather_objects])
     df = pd.concat([df[["city", "country"]], df_expanded], axis=1)
-    df["datetime"] = datetime.utcnow().isoformat()
+    df["datetime"] = datetime.now(UTC).isoformat()
     logger.info(f"DataFrame shape: {df.shape}")
     na_counts = df.isna().sum().to_dict()
     logger.info(f"NA counts per column: {na_counts}")
@@ -64,4 +64,4 @@ def process_weather_data(cities: List[str] = CITIES, countries: List[str] = COUN
 
 if __name__ == "__main__":
     result_df = process_weather_data()
-    result_df.head()
+    print(result_df)
