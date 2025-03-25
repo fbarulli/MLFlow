@@ -30,7 +30,7 @@ with DAG(
         task_id='collect_weather_data',
         image='weather-collector:light',
         api_version='auto',
-        auto_remove=True,
+        auto_remove="force",
         command=["python", "-m", "src.data_collection.weather_script"],
         docker_url='unix://var/run/docker.sock',
         network_mode='bridge',
