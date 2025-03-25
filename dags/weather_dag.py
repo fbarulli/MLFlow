@@ -14,8 +14,8 @@ default_args = {
 with DAG(
     'weather_data_collection',
     default_args=default_args,
-    description='Collect weather data hourly',
-    schedule_interval='@hourly',
+    description='Collect weather data every minute',
+    schedule_interval='@minutely',
     start_date=datetime(2025, 3, 24),
     catchup=False,
 ) as dag:
