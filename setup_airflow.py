@@ -15,10 +15,12 @@ try:
 except (subprocess.CalledProcessError, FileNotFoundError):
     print("Airflow not found. Installing airflow...")
     subprocess.run([sys.executable, "-m", "pip", "install", "apache-airflow"], check=True)
-    subprocess.run(["airflow", "db", "init"], check=True)
+    subprocess.run(["airflow", "db", "migrate"], check=True)
+    subprocess.run(["airflow", "connections", "create-default-connections"], check=True)
 
 if not (airflow_home / "airflow.cfg").exists():
-    subprocess.run(["airflow", "db", "init"], check=True)
+    subprocess.run(["airflow", "db", "migrate"], check=True)
+    subprocess.run(["airflow", "connections", "create-default-connections"], check=True)
 
 with open(airflow_home / "airflow.cfg", "r") as f:
     config = f.read()
