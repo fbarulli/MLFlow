@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import secrets
 
 project_root = Path(__file__).resolve().parent
 airflow_home = project_root
@@ -42,6 +43,12 @@ config = config.replace(
 ).replace(
     "load_examples = True",
     "load_examples = False"
+).replace(
+    "secret_key = changeme",
+    f"secret_key = {secrets.token_hex(16)}"
+).replace(
+    "base_url = http://0.0.0.0:8080",
+    "base_url = http://localhost:8793"
 )
 
 with open(airflow_home / "airflow.cfg", "w") as f:

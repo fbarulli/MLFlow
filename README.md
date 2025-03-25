@@ -24,3 +24,6 @@ airflow scheduler &
 
 Start WebServer:
 airflow webserver -p 8080
+
+
+./run_airflow.sh
