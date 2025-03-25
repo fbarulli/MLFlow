@@ -1,4 +1,3 @@
-# dags/weather_dag.py
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.operators.bash import BashOperator
@@ -30,12 +29,7 @@ with DAG(
 ) as dag:
     clean_logs = BashOperator(
         task_id='clean_logs',
-        bash_command="""
-        #!/bin/bash
-        set -e
-        LOG_DIR="{{ params.log_folder }}/dag_id=weather_data_collection"
-        rm -rf "${LOG_DIR}/run_id="*
-        """,
+        bash_command="rm -rf {{ params.log_folder }}/dag_id=weather_data_collection/run_id=*",
         params={'log_folder': log_folder},
     )
 
@@ -47,10 +41,13 @@ with DAG(
         command=["python", "-m", "src.data_collection.weather_script"],
         docker_url='unix://var/run/docker.sock',
         network_mode='bridge',
-        mounts=[
-            Mount(target='/data', source=str(data_storage), type='bind')
-        ],
+        mounts=[Mount(target='/data', source=str(data_storage), type='bind')],
         working_dir='/app'
     )
 
-    clean_logs >> collect_weather
+    version_data = BashOperator(
+        task_id='version_data',
+        bash_command=f'cd {project_root} && dvc add data_storage/raw/weather.csv && dvc push && git add data_storage/raw/weather.csv.dvc && git commit -m "Update weather data" && git push',
+    )
+
+    clean_logs >> collect_weather >> version_data

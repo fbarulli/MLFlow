@@ -1,4 +1,3 @@
 /raw/*
 !/raw/weather.csv
 !/raw/weather.csv.dvc
-/raw
