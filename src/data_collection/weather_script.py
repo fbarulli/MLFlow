@@ -13,7 +13,7 @@ logger = setup_logger()
 
 CITIES: List[str] = ["Paris", "London", "New York", "Berlin", "Tokyo"]
 COUNTRIES: List[str] = ["FR", "GB", "US", "DE", "JP"]
-OUTPUT_PATH: Path = Path("../../data_storage/raw/weather.csv")
+OUTPUT_PATH: Path = Path("/data_storage/raw/weather.csv")
 
 def to_weather_data(raw_data: Dict) -> Optional[WeatherData]:
     try:
@@ -54,7 +54,7 @@ def process_weather_data(cities: List[str] = CITIES, countries: List[str] = COUN
         OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
         df.to_csv(OUTPUT_PATH, mode='a', header=not OUTPUT_PATH.exists(), index=False)
         logger.info(f"Data appended to {OUTPUT_PATH}")
-        subprocess.run(["dvc", "add", str(OUTPUT_PATH)], check=True)
+        subprocess.run(["dvc", "add", str(OUTPUT_PATH)], check=True, cwd="/app")
         logger.info(f"Added {OUTPUT_PATH} to DVC tracking")
     except (PermissionError, FileNotFoundError, subprocess.CalledProcessError) as e:
         logger.error(f"Failed during file operation or DVC add: {str(e)}", exc_info=True)
