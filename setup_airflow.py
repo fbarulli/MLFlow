@@ -46,4 +46,5 @@ config = config.replace(
 with open(airflow_home / "airflow.cfg", "w") as f:
     f.write(config)
 
+print(f"export AIRFLOW_HOME={airflow_home}")
 print(f"Airflow configured: AIRFLOW_HOME={airflow_home.relative_to(Path.cwd())}, dags_folder={dags_folder.relative_to(Path.cwd())}")

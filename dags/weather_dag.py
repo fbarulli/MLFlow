@@ -3,6 +3,7 @@ from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
 from datetime import datetime, timedelta
 from pathlib import Path
+from docker.types import Mount
 
 default_args = {
     'owner': 'airflow',
@@ -13,16 +14,17 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-project_root = Path(__file__).resolve().parent.parent  # Up from dags/ to MLFlow/
+project_root = Path(__file__).resolve().parent.parent
 data_storage = project_root / "data_storage"
 
 with DAG(
     'weather_data_collection',
     default_args=default_args,
     description='Collect weather data every minute',
-    schedule_interval='* * * * *',
+    schedule='* * * * *',  # Updated to schedule
     start_date=datetime(2025, 3, 25, 10, 0),
     catchup=False,
+    tags=["data"]
 ) as dag:
     collect_weather = DockerOperator(
         task_id='collect_weather_data',
@@ -32,7 +34,7 @@ with DAG(
         command=["python", "-m", "src.data_collection.weather_script"],
         docker_url='unix://var/run/docker.sock',
         network_mode='bridge',
-        volumes=[f"{data_storage}:/data_storage"],
+        mounts=[Mount(target='/data_storage', source=str(data_storage), type='bind')],
     )
 
     collect_weather
