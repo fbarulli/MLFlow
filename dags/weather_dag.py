@@ -28,6 +28,17 @@ with DAG(
     catchup=False,
     tags=["data"]
 ) as dag:
+    clean_logs = BashOperator(
+        task_id='clean_logs',
+        bash_command="""
+        #!/bin/bash
+        set -e
+        LOG_DIR="{{ params.log_folder }}/dag_id=weather_data_collection"
+        rm -rf "${LOG_DIR}/run_id="*
+        """,
+        params={'log_folder': log_folder},
+    )
+
     collect_weather = DockerOperator(
         task_id='collect_weather_data',
         image='weather-collector:light',
@@ -42,14 +53,4 @@ with DAG(
         working_dir='/app'
     )
 
-    version_data = BashOperator(
-        task_id='version_data',
-        bash_command=f'cd {project_root} && dvc add data_storage/raw/weather.csv && git add data_storage/raw/weather.csv.dvc data_storage/raw/.gitignore && git commit -m "Update weather data"',
-    )
-
-    clean_logs = BashOperator(
-        task_id='clean_logs',
-        bash_command=f'find {log_folder}/dag_id=weather_data_collection -type f -name "*.log" -not -newer {log_folder}/dag_id=weather_data_collection/run_id={{ execution_date.strftime("%Y-%m-%dT%H:%M:%S+00:00") }} -delete',
-    )
-
-    collect_weather >> version_data >> clean_logs
+    clean_logs >> collect_weather
