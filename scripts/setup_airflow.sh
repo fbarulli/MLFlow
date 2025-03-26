@@ -13,5 +13,21 @@ fi
 export AIRFLOW_HOME="$PROJECT_ROOT"
 echo "Setting up Airflow in: $AIRFLOW_HOME"
 echo "Using Python: $PYTHON_EXECUTABLE"
-echo "Running Airflow setup..."
-"$PYTHON_EXECUTABLE" "$PROJECT_ROOT/setup_airflow.py"
+
+# Check if airflow.cfg exists
+if [ -f "$AIRFLOW_HOME/airflow.cfg" ]; then
+    echo "airflow.cfg already exists, skipping config creation."
+else
+    echo "Creating new airflow.cfg..."
+    "$PYTHON_EXECUTABLE" -m airflow config list >/dev/null
+fi
+
+# Check if database is initialized
+if [ -f "$AIRFLOW_HOME/airflow.db" ]; then
+    echo "Airflow database already initialized, skipping init."
+else
+    echo "Initializing Airflow database..."
+    "$PYTHON_EXECUTABLE" -m airflow db init
+fi
+
+echo "Airflow setup complete."

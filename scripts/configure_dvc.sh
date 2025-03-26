@@ -1,6 +1,10 @@
 #!/bin/bash
 # ~/MLFlow/scripts/configure_dvc.sh
 set -e
+if ! command -v dvc >/dev/null 2>&1; then
+    echo "DVC not found. Please install it (e.g., 'pip install dvc')."
+    exit 1
+fi
 if ! dvc remote list | grep -q "myremote"; then
     echo "DVC remote 'myremote' not found."
     dvc remote add -d myremote https://dagshub.com/fbarulli/MLFlow.dvc
@@ -15,3 +19,4 @@ if ! dvc remote list | grep -q "myremote"; then
 else
     echo "DVC remote 'myremote' already configured."
 fi
+exit 0
