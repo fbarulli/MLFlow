@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/087168c87de141da91097e79733dffcd/artifacts
+end_time: 1742988598944
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 087168c87de141da91097e79733dffcd
+run_name: fun-deer-387
+run_uuid: 087168c87de141da91097e79733dffcd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742988598934
+status: 4
+tags: []
+user_id: ubuntu

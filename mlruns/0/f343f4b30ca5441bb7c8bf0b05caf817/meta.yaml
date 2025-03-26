@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f343f4b30ca5441bb7c8bf0b05caf817/artifacts
+end_time: 1742988711225
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f343f4b30ca5441bb7c8bf0b05caf817
+run_name: dazzling-perch-55
+run_uuid: f343f4b30ca5441bb7c8bf0b05caf817
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742988710692
+status: 4
+tags: []
+user_id: ubuntu
