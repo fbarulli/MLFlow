@@ -23,7 +23,7 @@ with DAG(
     'weather_data_monitoring',
     default_args=default_args,
     description='Monitor weather data drift every 30 minutes',
-    schedule='*/30 * * * *',  # Every 30 minutes
+    schedule='* * * * *',  # Every 30 minutes
     start_date=datetime(2025, 3, 25, 10, 0),
     catchup=False,
     tags=["monitoring"]
