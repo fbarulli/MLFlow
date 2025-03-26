@@ -1,4 +1,4 @@
-# /home/ubuntu/MLFlow/src/monitoring/monitor_script.py
+# /src/monitoring/monitor_script.py
 import pandas as pd
 from pathlib import Path
 from typing import Optional
