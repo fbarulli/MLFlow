@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b479e7c25d404146b03fb012b564517b/artifacts
+end_time: 1742988950935
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b479e7c25d404146b03fb012b564517b
+run_name: melodic-ox-53
+run_uuid: b479e7c25d404146b03fb012b564517b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742988950301
+status: 3
+tags: []
+user_id: ubuntu

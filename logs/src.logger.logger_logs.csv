@@ -1,38 +1,4 @@
 timestamp,level,message,module,traceback
-2025-03-26T11:31:50.702973,INFO,Starting data monitoring,src.logger.logger,
-2025-03-26T11:31:50.703173,INFO,Looking for data at: /home/ubuntu/MLFlow/data_storage/raw/weather.csv,src.logger.logger,
-2025-03-26T11:31:51.223137,INFO,Drift report saved to /home/ubuntu/MLFlow/data_storage/raw/drift_report.html,src.logger.logger,
-2025-03-26T11:31:51.227025,ERROR,"Monitoring failed: When an mlflow-artifacts URI was supplied, the tracking URI must be a valid http or https URI, but it was currently set to file:///home/ubuntu/MLFlow/mlruns. Perhaps you forgot to set the tracking URI to the running MLflow server. To set the tracking URI, use either of the following methods:
-1. Set the MLFLOW_TRACKING_URI environment variable to the desired tracking URI. `export MLFLOW_TRACKING_URI=http://localhost:5000`
-2. Set the tracking URI programmatically by calling `mlflow.set_tracking_uri`. `mlflow.set_tracking_uri('http://localhost:5000')`",src.logger.logger,"2025-03-26 11:31:51,226 - ERROR - Monitoring failed: When an mlflow-artifacts URI was supplied, the tracking URI must be a valid http or https URI, but it was currently set to file:///home/ubuntu/MLFlow/mlruns. Perhaps you forgot to set the tracking URI to the running MLflow server. To set the tracking URI, use either of the following methods:
-1. Set the MLFLOW_TRACKING_URI environment variable to the desired tracking URI. `export MLFLOW_TRACKING_URI=http://localhost:5000`
-2. Set the tracking URI programmatically by calling `mlflow.set_tracking_uri`. `mlflow.set_tracking_uri('http://localhost:5000')`
-Traceback (most recent call last):
-  File ""/home/ubuntu/MLFlow/src/monitoring/monitor_script.py"", line 40, in monitor_data
-    mlflow.log_artifact(REPORT_PATH)
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/tracking/fluent.py"", line 1179, in log_artifact
-    MlflowClient().log_artifact(run_id, local_path, artifact_path)
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/tracking/client.py"", line 2377, in log_artifact
-    self._tracking_client.log_artifact(run_id, local_path, artifact_path)
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py"", line 918, in log_artifact
-    artifact_repo = self._get_artifact_repo(run_id)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py"", line 901, in _get_artifact_repo
-    artifact_repo = get_artifact_repository(artifact_uri)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/store/artifact/artifact_repository_registry.py"", line 131, in get_artifact_repository
-    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/store/artifact/artifact_repository_registry.py"", line 76, in get_artifact_repository
-    return repository(artifact_uri)
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/store/artifact/mlflow_artifacts_repo.py"", line 51, in __init__
-    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/store/artifact/mlflow_artifacts_repo.py"", line 65, in resolve_uri
-    _validate_uri_scheme(track_parse)
-  File ""/home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/mlflow/store/artifact/mlflow_artifacts_repo.py"", line 35, in _validate_uri_scheme
-    raise MlflowException(
-mlflow.exceptions.MlflowException: When an mlflow-artifacts URI was supplied, the tracking URI must be a valid http or https URI, but it was currently set to file:///home/ubuntu/MLFlow/mlruns. Perhaps you forgot to set the tracking URI to the running MLflow server. To set the tracking URI, use either of the following methods:
-1. Set the MLFLOW_TRACKING_URI environment variable to the desired tracking URI. `export MLFLOW_TRACKING_URI=http://localhost:5000`
-2. Set the tracking URI programmatically by calling `mlflow.set_tracking_uri`. `mlflow.set_tracking_uri('http://localhost:5000')`"
+2025-03-26T11:35:50.362582,INFO,Starting data monitoring,src.logger.logger,
+2025-03-26T11:35:50.362895,INFO,Looking for data at: /home/ubuntu/MLFlow/data_storage/raw/weather.csv,src.logger.logger,
+2025-03-26T11:35:50.877878,INFO,Drift report saved to /home/ubuntu/MLFlow/data_storage/raw/drift_report.html,src.logger.logger,
