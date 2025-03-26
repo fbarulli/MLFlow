@@ -1,0 +1,57 @@
+[2025-03-26T12:54:45.311+0000] {processor.py:186} INFO - Started process (PID=100185) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:54:45.313+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-03-26T12:54:45.317+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.317+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:54:45.330+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:54:45.474+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.473+0000] {override.py:1930} INFO - Created Permission View: can read on DAG:example_sla_dag
+[2025-03-26T12:54:45.492+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.492+0000] {override.py:1930} INFO - Created Permission View: can edit on DAG:example_sla_dag
+[2025-03-26T12:54:45.505+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.505+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG:example_sla_dag
+[2025-03-26T12:54:45.529+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.529+0000] {override.py:1930} INFO - Created Permission View: can read on DAG Run:example_sla_dag
+[2025-03-26T12:54:45.541+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.541+0000] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:example_sla_dag
+[2025-03-26T12:54:45.556+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.554+0000] {override.py:1930} INFO - Created Permission View: can create on DAG Run:example_sla_dag
+[2025-03-26T12:54:45.572+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.572+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:example_sla_dag
+[2025-03-26T12:54:45.573+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.573+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:54:45.591+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.590+0000] {dag.py:3262} INFO - Creating ORM DAG for example_sla_dag
+[2025-03-26T12:54:45.605+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:45.604+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2025-03-26 12:52:00+00:00, run_after=2025-03-26 12:54:00+00:00
+[2025-03-26T12:54:45.630+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.329 seconds
+[2025-03-26T12:55:54.077+0000] {processor.py:186} INFO - Started process (PID=100380) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:55:54.078+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-03-26T12:55:54.081+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:55:54.080+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:55:54.095+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:55:54.116+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:55:54.116+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:55:54.159+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:55:54.158+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2025-03-26 12:52:00+00:00, run_after=2025-03-26 12:54:00+00:00
+[2025-03-26T12:55:54.191+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.120 seconds
+[2025-03-26T12:56:58.186+0000] {processor.py:186} INFO - Started process (PID=100588) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:56:58.187+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-03-26T12:56:58.190+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:56:58.189+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:56:58.203+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:56:58.223+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:56:58.222+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:56:58.253+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:56:58.253+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2025-03-26 12:54:00+00:00, run_after=2025-03-26 12:56:00+00:00
+[2025-03-26T12:56:58.284+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.105 seconds
+[2025-03-26T12:58:05.514+0000] {processor.py:186} INFO - Started process (PID=100768) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:58:05.515+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-03-26T12:58:05.517+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:58:05.517+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:58:05.529+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:58:05.546+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:58:05.545+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:58:05.573+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:58:05.572+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2025-03-26 12:56:00+00:00, run_after=2025-03-26 12:58:00+00:00
+[2025-03-26T12:58:05.600+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.093 seconds
+[2025-03-26T12:59:08.100+0000] {processor.py:186} INFO - Started process (PID=100895) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:59:08.102+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-03-26T12:59:08.105+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:59:08.104+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:59:08.119+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T12:59:08.136+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:59:08.136+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:59:08.167+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:59:08.167+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2025-03-26 12:56:00+00:00, run_after=2025-03-26 12:58:00+00:00
+[2025-03-26T12:59:08.201+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.117 seconds
+[2025-03-26T13:00:10.623+0000] {processor.py:186} INFO - Started process (PID=101080) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T13:00:10.625+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-03-26T13:00:10.629+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:00:10.627+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T13:00:10.647+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T13:00:10.665+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:00:10.665+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T13:00:10.694+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:00:10.693+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2025-03-26 12:58:00+00:00, run_after=2025-03-26 13:00:00+00:00
+[2025-03-26T13:00:10.724+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.112 seconds
+[2025-03-26T13:01:14.226+0000] {processor.py:186} INFO - Started process (PID=101157) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T13:01:14.229+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-03-26T13:01:14.234+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:01:14.231+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T13:01:14.253+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-03-26T13:01:14.275+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:01:14.274+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T13:01:14.312+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:01:14.311+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2025-03-26 12:58:00+00:00, run_after=2025-03-26 13:00:00+00:00
+[2025-03-26T13:01:14.347+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.133 seconds

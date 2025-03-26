@@ -1,4 +1,0 @@
-timestamp,level,message,module,traceback
-2025-03-26T11:35:50.362582,INFO,Starting data monitoring,src.logger.logger,
-2025-03-26T11:35:50.362895,INFO,Looking for data at: /home/ubuntu/MLFlow/data_storage/raw/weather.csv,src.logger.logger,
-2025-03-26T11:35:50.877878,INFO,Drift report saved to /home/ubuntu/MLFlow/data_storage/raw/drift_report.html,src.logger.logger,

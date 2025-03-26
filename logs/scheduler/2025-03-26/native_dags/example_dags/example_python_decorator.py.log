@@ -1,0 +1,57 @@
+[2025-03-26T12:54:38.375+0000] {processor.py:186} INFO - Started process (PID=100166) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:54:38.376+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-03-26T12:54:38.378+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.378+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:54:38.398+0000] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:54:38.535+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.534+0000] {override.py:1930} INFO - Created Permission View: can read on DAG:example_python_decorator
+[2025-03-26T12:54:38.552+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.552+0000] {override.py:1930} INFO - Created Permission View: can edit on DAG:example_python_decorator
+[2025-03-26T12:54:38.565+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.564+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG:example_python_decorator
+[2025-03-26T12:54:38.588+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.587+0000] {override.py:1930} INFO - Created Permission View: can read on DAG Run:example_python_decorator
+[2025-03-26T12:54:38.601+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.601+0000] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:example_python_decorator
+[2025-03-26T12:54:38.616+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.615+0000] {override.py:1930} INFO - Created Permission View: can create on DAG Run:example_python_decorator
+[2025-03-26T12:54:38.630+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.629+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:example_python_decorator
+[2025-03-26T12:54:38.630+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.630+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:54:38.649+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.649+0000] {dag.py:3262} INFO - Creating ORM DAG for example_python_decorator
+[2025-03-26T12:54:38.650+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:54:38.650+0000] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-03-26T12:54:38.683+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.316 seconds
+[2025-03-26T12:55:48.907+0000] {processor.py:186} INFO - Started process (PID=100363) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:55:48.908+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-03-26T12:55:48.910+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:55:48.910+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:55:48.932+0000] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:55:48.953+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:55:48.952+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:55:48.968+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:55:48.967+0000] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-03-26T12:55:49.003+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.107 seconds
+[2025-03-26T12:56:52.924+0000] {processor.py:186} INFO - Started process (PID=100579) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:56:52.927+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-03-26T12:56:52.930+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:56:52.930+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:56:52.950+0000] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:56:52.978+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:56:52.977+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:56:52.995+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:56:52.994+0000] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-03-26T12:56:53.024+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.116 seconds
+[2025-03-26T12:58:00.409+0000] {processor.py:186} INFO - Started process (PID=100759) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:58:00.410+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-03-26T12:58:00.412+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:58:00.412+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:58:00.429+0000] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:58:00.448+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:58:00.448+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:58:00.463+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:58:00.463+0000] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-03-26T12:58:00.489+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.087 seconds
+[2025-03-26T12:59:02.708+0000] {processor.py:186} INFO - Started process (PID=100886) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:59:02.710+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-03-26T12:59:02.712+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:59:02.711+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:59:02.729+0000] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T12:59:02.748+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:59:02.748+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T12:59:02.763+0000] {logging_mixin.py:190} INFO - [2025-03-26T12:59:02.763+0000] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-03-26T12:59:02.790+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.089 seconds
+[2025-03-26T13:00:05.953+0000] {processor.py:186} INFO - Started process (PID=101071) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T13:00:05.955+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-03-26T13:00:05.958+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:00:05.957+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T13:00:05.982+0000] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T13:00:06.007+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:00:06.007+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T13:00:06.028+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:00:06.027+0000] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-03-26T13:00:06.062+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.117 seconds
+[2025-03-26T13:01:08.247+0000] {processor.py:186} INFO - Started process (PID=101152) to work on /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T13:01:08.249+0000] {processor.py:914} INFO - Processing file /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-03-26T13:01:08.251+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:01:08.251+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T13:01:08.268+0000] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-03-26T13:01:08.289+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:01:08.289+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-26T13:01:08.307+0000] {logging_mixin.py:190} INFO - [2025-03-26T13:01:08.307+0000] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-03-26T13:01:08.338+0000] {processor.py:208} INFO - Processing /home/ubuntu/miniconda3/envs/mlflow/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.099 seconds
