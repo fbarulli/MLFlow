@@ -1,22 +1,29 @@
 #!/bin/bash
 # ~/MLFlow/scripts/configure_dvc.sh
 set -e
-if ! command -v dvc >/dev/null 2>&1; then
-    echo "DVC not found. Please install it (e.g., 'pip install dvc')."
+
+if ! command -v dvc &> /dev/null; then
+    echo "DVC not installed. Please install it first."
     exit 1
 fi
-if ! dvc remote list | grep -q "myremote"; then
-    echo "DVC remote 'myremote' not found."
-    dvc remote add -d myremote https://dagshub.com/fbarulli/MLFlow.dvc
-    echo "DVC remote 'myremote' added."
-    read -p "Enter your DagsHub username (e.g., fbarulli): " dvc_user
-    read -s -p "Enter your DagsHub token: " dvc_token
-    echo
-    dvc remote modify myremote --local auth basic
-    dvc remote modify myremote --local user "$dvc_user"
-    dvc remote modify myremote --local password "$dvc_token"
-    echo "DVC remote 'myremote' configured with username: $dvc_user"
+
+DVC_REMOTE_URL=$(dvc remote list 2>/dev/null | grep "origin" | awk '{print $2}' || true)
+
+if [ -z "$DVC_REMOTE_URL" ]; then
+    echo "Configuring DVC with hardcoded remote..."
+    dvc remote add origin https://dagshub.com/fbarulli/MLFlow
+    dvc remote modify origin --local auth basic
+    dvc remote modify origin --local user fbarulli
+    dvc remote modify origin --local password 338c74d36ff47a81dd766e2c0de58b72ef9de932
+    dvc config --global core.autostage false
+    echo "DVC configured with remote: https://dagshub.com/fbarulli/MLFlow"
 else
-    echo "DVC remote 'myremote' already configured."
+    if [ "$DVC_REMOTE_URL" = "https://dagshub.com/fbarulli/MLFlow" ]; then
+        echo "DVC remote already set to expected value: $DVC_REMOTE_URL"
+        dvc config --global core.autostage false
+    else
+        echo "DVC remote exists but does not match expected value: $DVC_REMOTE_URL"
+        echo "Expected: https://dagshub.com/fbarulli/MLFlow"
+        exit 1
+    fi
 fi
-exit 0
