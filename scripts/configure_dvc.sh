@@ -31,7 +31,7 @@ fi
 echo "Setting DVC credentials..."
 dvc remote modify origin --local auth basic
 dvc remote modify origin --local user fbarulli
-dvc remote modify origin --local password 338c74d36ff47a81dd766e2c0de58b72ef9de932
+dvc remote modify origin --local password 7086748274882e4596d6cb92d3d1b09f627f5d70
 dvc config --global core.autostage false
 
 echo "DVC configured with remote: $EXPECTED_URL"

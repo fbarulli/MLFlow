@@ -22,28 +22,31 @@ log_folder = project_root / "logs"
 with DAG(
     'weather_data_monitoring',
     default_args=default_args,
-    description='Monitor weather data drift every 30 minutes',
-    schedule='* * * * *',  # Every 30 minutes
-    start_date=datetime(2025, 3, 25, 10, 0),
+    description='Monitor weather data every minute',
+    schedule='* * * * *',
+    start_date=datetime(2023, 1, 1),
     catchup=False,
-    tags=["monitoring"]
+    tags=["data"],
+    max_active_runs=1,
 ) as dag:
-    clean_logs = BashOperator(
-        task_id='clean_logs',
-        bash_command="rm -rf {{ params.log_folder }}/dag_id=weather_data_monitoring/run_id=*",
-        params={'log_folder': log_folder},
+    
+    setup_data_dir = BashOperator(
+        task_id='setup_data_dir',
+        bash_command=f'mkdir -p {data_storage}',
     )
 
+    
     monitor_data = DockerOperator(
         task_id='monitor_data',
         image='weather-monitor:light',
         api_version='auto',
         auto_remove="force",
-        command=["python", "-m", "src.monitoring.monitor_script"],
+        command=["python", "-m", "src.data_monitoring.monitor_script"],  # Adjust command as needed
         docker_url='unix://var/run/docker.sock',
         network_mode='bridge',
         mounts=[Mount(target='/data', source=str(data_storage), type='bind')],
-        working_dir='/app'
+        working_dir='/app',
     )
 
-    clean_logs >> monitor_data
+    
+    setup_data_dir >> monitor_data
