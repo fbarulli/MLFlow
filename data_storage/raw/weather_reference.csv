@@ -1,6 +1,0 @@
-city,country,main_temp,main_pressure,main_humidity,weather_description,datetime
-Paris,FR,15.16,1021,62,scattered clouds,2025-03-25 15:24:18
-London,GB,13.26,1022,77,overcast clouds,2025-03-25 15:24:18
-New York,US,11.22,1013,41,clear sky,2025-03-25 15:24:18
-Berlin,DE,12.19,1016,67,clear sky,2025-03-25 15:24:18
-Tokyo,JP,18.65,1001,54,clear sky,2025-03-25 15:24:18
