@@ -1,4 +1,5 @@
-/raw/*
-!data_storage/raw/
-!data_storage/raw/weather.csv
-!data_storage/raw/*.dvcdata_storage/raw/
+# .gitignore
+
+data_storage/raw/*
+!data_storage/raw/*.dvc
+data_storage/raw/weather_*.csv
