@@ -6,4 +6,4 @@
     user = fbarulli
     password = 7b3031147955b330e16d880234770678aaffc31c
 ['remote "origin"']
-    url = https://dagshub.com/fbarulli/MLFlow
+    url = https://dagshub.com/fbarulli/MLFlow.dvc
