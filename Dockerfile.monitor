@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 WORKDIR /app
 RUN apt-get update && apt-get install -y && \
-    pip install --no-cache-dir pandas evidently && \
+    pip install --no-cache-dir pandas evidently mlflow && \
     apt-get clean && \
     useradd -m -u 1000 appuser && \
     chown -R appuser:appuser /app

@@ -1,4 +1,4 @@
-# dags/weather_monitor_dag.py
+#dags/weather_monitor_dag.py
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.operators.bash import BashOperator
@@ -41,7 +41,7 @@ with DAG(
         image='weather-monitor:light',
         api_version='auto',
         auto_remove="force",
-        command=["python", "-m", "src.data_monitoring.monitor_script"],  # Adjust command as needed
+        command=["python", "-m", "src.monitoring.monitor_script"],
         docker_url='unix://var/run/docker.sock',
         network_mode='bridge',
         mounts=[Mount(target='/data', source=str(data_storage), type='bind')],
