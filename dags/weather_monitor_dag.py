@@ -32,7 +32,8 @@ with DAG(
     
     setup_data_dir = BashOperator(
         task_id='setup_data_dir',
-        bash_command=f'mkdir -p {data_storage}',
+        bash_command='mkdir -p {{ params.data_storage }}',
+        params={'data_storage': str(data_storage)}
     )
 
     

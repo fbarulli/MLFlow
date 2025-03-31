@@ -1,0 +1,31 @@
+[2025-03-31T15:11:16.403+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-31T15:11:16.422+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-03-31T15:09:00+00:00 [queued]>
+[2025-03-31T15:11:16.431+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-03-31T15:09:00+00:00 [queued]>
+[2025-03-31T15:11:16.432+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-31T15:11:16.452+0000] {taskinstance.py:2890} INFO - Executing <Task(DockerOperator): collect_weather_data> on 2025-03-31 15:09:00+00:00
+[2025-03-31T15:11:16.457+0000] {standard_task_runner.py:72} INFO - Started process 8631 to run task
+[2025-03-31T15:11:16.461+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'weather_data_collection', 'collect_weather_data', 'scheduled__2025-03-31T15:09:00+00:00', '--job-id', '355', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmpkhgmfv3e']
+[2025-03-31T15:11:16.463+0000] {standard_task_runner.py:105} INFO - Job 355: Subtask collect_weather_data
+[2025-03-31T15:11:16.511+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-03-31T15:09:00+00:00 [running]> on host ip-172-31-19-13.eu-west-1.compute.internal
+[2025-03-31T15:11:16.601+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='weather_data_collection' AIRFLOW_CTX_TASK_ID='collect_weather_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-31T15:09:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-31T15:09:00+00:00'
+[2025-03-31T15:11:16.601+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-31T15:11:16.642+0000] {docker.py:353} INFO - Starting docker container from image weather-collector:light
+[2025-03-31T15:11:19.542+0000] {docker.py:73} INFO -   0%|          | 0/5 [00:00<?, ?it/s]
+[2025-03-31T15:11:19.727+0000] {docker.py:73} INFO -  60%|██████    | 3/5 [00:00<00:00, 16.28it/s]
+[2025-03-31T15:11:19.906+0000] {docker.py:73} INFO - 100%|██████████| 5/5 [00:00<00:00, 13.30it/s]
+[2025-03-31T15:11:20.006+0000] {docker.py:73} INFO - 100%|██████████| 5/5 [00:00<00:00, 10.78it/s]
+[2025-03-31T15:11:20.008+0000] {docker.py:73} INFO -   0%|          | 0/5 [00:00<?, ?it/s]
+[2025-03-31T15:11:20.011+0000] {docker.py:73} INFO - 100%|██████████| 5/5 [00:00<00:00, 1814.15it/s]
+[2025-03-31T15:11:20.075+0000] {docker.py:73} INFO -        city country  ...  weather_description             datetime
+[2025-03-31T15:11:20.076+0000] {docker.py:73} INFO - 0     Paris      FR  ...            clear sky  2025-03-31T15:11:20
+[2025-03-31T15:11:20.076+0000] {docker.py:73} INFO - 1    London      GB  ...           few clouds  2025-03-31T15:11:20
+[2025-03-31T15:11:20.077+0000] {docker.py:73} INFO - 2  New York      US  ...      overcast clouds  2025-03-31T15:11:20
+[2025-03-31T15:11:20.077+0000] {docker.py:73} INFO - 3    Berlin      DE  ...           light rain  2025-03-31T15:11:20
+[2025-03-31T15:11:20.077+0000] {docker.py:73} INFO - 4     Tokyo      JP  ...        broken clouds  2025-03-31T15:11:20
+[2025-03-31T15:11:20.078+0000] {docker.py:73} INFO - 
+[2025-03-31T15:11:20.078+0000] {docker.py:73} INFO - [5 rows x 7 columns]
+[2025-03-31T15:11:20.533+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-31T15:11:20.533+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=weather_data_collection, task_id=collect_weather_data, run_id=scheduled__2025-03-31T15:09:00+00:00, execution_date=20250331T150900, start_date=20250331T151116, end_date=20250331T151120
+[2025-03-31T15:11:20.581+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-31T15:11:20.607+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-31T15:11:20.614+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -4,9 +4,9 @@ import subprocess
 import sys
 import shutil
 
-# Use absolute path for AIRFLOW_HOME
-airflow_home = "/home/ubuntu/MLFlow"
-dags_folder = f"{airflow_home}/dags"
+# Use project root path for AIRFLOW_HOME
+airflow_home = str(Path(__file__).resolve().parent)
+dags_folder = str(Path(airflow_home) / "dags")
 os.environ["AIRFLOW_HOME"] = airflow_home
 
 # Disable interactive prompts

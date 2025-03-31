@@ -1,7 +1,7 @@
 #!/bin/bash
 # ~/MLFlow/scripts/configure_dvc.sh
 set -e
-cd /home/ubuntu/MLFlow
+cd "$(dirname "$(dirname "$0")")"
 if ! command -v dvc &> /dev/null; then
     echo "DVC not installed. Please install it first."
     exit 1
@@ -21,6 +21,6 @@ fi
 echo "Setting DVC credentials..."
 dvc remote modify origin --local auth basic
 dvc remote modify origin --local user fbarulli
-dvc remote modify origin --local password <your-new-dagshub-token>
+dvc remote modify origin --local password 51787e96187f806133bd849bc8c772b9c47c11ea
 dvc config --global core.autostage false
 echo "DVC configured with remote: $EXPECTED_URL"

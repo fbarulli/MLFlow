@@ -29,17 +29,18 @@ with DAG(
     tags=["data"],
     max_active_runs=1,
 ) as dag:
-    
     configure_dvc = BashOperator(
         task_id='configure_dvc',
-        bash_command='bash /home/ubuntu/MLFlow/scripts/configure_dvc.sh',
+        bash_command='bash {{ params.script_path }}',
+        params={'script_path': str(project_root / 'scripts' / 'configure_dvc.sh')}
     )
 
-    
     setup_data_dir = BashOperator(
         task_id='setup_data_dir',
-        bash_command=f'mkdir -p {data_storage}',
+        bash_command='mkdir -p {{ params.data_storage }}',
+        params={'data_storage': str(data_storage)}
     )
+
 
     
     clean_logs = BashOperator(
@@ -64,9 +65,9 @@ with DAG(
     
     version_data = BashOperator(
         task_id='version_data',
-        bash_command=f'''
-        cd {project_root} && \
-        if [ -f {data_storage}/weather.csv ]; then
+        bash_command="""
+        cd {{ params.project_root }} && \
+        if [ -f {{ params.data_storage }}/weather.csv ]; then
             dvc add data_storage/raw/weather.csv && \
             dvc push && \
             git add data_storage/raw/weather.csv.dvc && \
@@ -76,7 +77,11 @@ with DAG(
             echo "weather.csv not found, skipping versioning."
             exit 1
         fi
-        ''',
+        """,
+        params={
+            'project_root': str(project_root),
+            'data_storage': str(data_storage)
+        }
     )
 
     
