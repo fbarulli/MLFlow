@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: airflow-custom-hooks
+Version: 0.1
+Requires-Dist: apache-airflow
+Dynamic: requires-dist

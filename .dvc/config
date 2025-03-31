@@ -1,9 +1,7 @@
 [core]
-    remote = myremote
-    autostage = true
-['remote "myremote"']
+    autostage = false
+[remote "origin"]
     url = https://dagshub.com/fbarulli/MLFlow.dvc
+    auth = basic
     user = fbarulli
-    password = 7b3031147955b330e16d880234770678aaffc31c
-['remote "origin"']
-    url = https://dagshub.com/fbarulli/MLFlow.dvc
+    password = 51787e96187f806133bd849bc8c772b9c47c11ea

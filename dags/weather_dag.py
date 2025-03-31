@@ -1,10 +1,21 @@
 #dags/weather_dag.py
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
-from airflow.operators.bash import BashOperator
+from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 from pathlib import Path
 from docker.types import Mount
+from airflow_custom_hooks.dvc_hook import DVCHook
+
+def version_weather_data(project_root, run_id):
+    """Version weather data using DVC hook"""
+    hook = DVCHook()
+    hook.add_and_push(
+        filepath="data_storage/raw/weather.csv",
+        cwd=project_root,
+        commit=True,
+        message=f"Update weather data for run {run_id}"
+    )
 
 default_args = {
     'owner': 'airflow',
@@ -29,27 +40,6 @@ with DAG(
     tags=["data"],
     max_active_runs=1,
 ) as dag:
-    configure_dvc = BashOperator(
-        task_id='configure_dvc',
-        bash_command='bash {{ params.script_path }}',
-        params={'script_path': str(project_root / 'scripts' / 'configure_dvc.sh')}
-    )
-
-    setup_data_dir = BashOperator(
-        task_id='setup_data_dir',
-        bash_command='mkdir -p {{ params.data_storage }}',
-        params={'data_storage': str(data_storage)}
-    )
-
-
-    
-    clean_logs = BashOperator(
-        task_id='clean_logs',
-        bash_command="rm -rf {{ params.log_folder }}/dag_id={{ dag.dag_id }}/run_id={{ run_id }}",
-        params={'log_folder': str(log_folder)},
-    )
-
-    
     collect_weather = DockerOperator(
         task_id='collect_weather_data',
         image='weather-collector:light',
@@ -62,27 +52,13 @@ with DAG(
         working_dir='/app',
     )
 
-    
-    version_data = BashOperator(
+    version_data = PythonOperator(
         task_id='version_data',
-        bash_command="""
-        cd {{ params.project_root }} && \
-        if [ -f {{ params.data_storage }}/weather.csv ]; then
-            dvc add data_storage/raw/weather.csv && \
-            dvc push && \
-            git add data_storage/raw/weather.csv.dvc && \
-            git commit -m "Update weather data for run {{ run_id }}" --allow-empty && \
-            git push
-        else
-            echo "weather.csv not found, skipping versioning."
-            exit 1
-        fi
-        """,
-        params={
+        python_callable=version_weather_data,
+        op_kwargs={
             'project_root': str(project_root),
-            'data_storage': str(data_storage)
+            'run_id': '{{ run_id }}'
         }
     )
 
-    
-    configure_dvc >> setup_data_dir >> clean_logs >> collect_weather >> version_data
+    collect_weather >> version_data

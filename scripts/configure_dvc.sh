@@ -19,8 +19,30 @@ else
     echo "DVC remote already set to expected value: $DVC_REMOTE_URL"
 fi
 echo "Setting DVC credentials..."
-dvc remote modify origin --local auth basic
-dvc remote modify origin --local user fbarulli
-dvc remote modify origin --local password 51787e96187f806133bd849bc8c772b9c47c11ea
-dvc config --global core.autostage false
+# Create .dvc/config if it doesn't exist
+mkdir -p .dvc
+touch .dvc/config
+
+# Write DVC configuration directly
+cat > .dvc/config << EOF
+[core]
+    autostage = false
+[remote "origin"]
+    url = ${EXPECTED_URL}
+    auth = basic
+    user = fbarulli
+    password = 51787e96187f806133bd849bc8c772b9c47c11ea
+EOF
+
+# Verify configuration
+echo "Verifying DVC configuration..."
+if ! dvc remote list | grep -q "origin"; then
+    echo "Error: DVC remote 'origin' not configured"
+    exit 1
+fi
+
+if ! dvc status; then
+    echo "Error: DVC status check failed"
+    exit 1
+fi
 echo "DVC configured with remote: $EXPECTED_URL"
