@@ -1,6 +1,7 @@
 [core]
     autostage = false
-[remote "origin"]
+    remote = origin
+['remote "origin"']
     url = https://dagshub.com/fbarulli/MLFlow.dvc
     auth = basic
     user = fbarulli

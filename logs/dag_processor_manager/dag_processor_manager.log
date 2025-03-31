@@ -2193,3 +2193,1103 @@ File Path                                        PID    Runtime      # DAGs    #
 /home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.41s           2025-03-31T16:08:04                      34
 /home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           0           0                                                            0
 ================================================================================
+[2025-03-31T16:08:18.380+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:08:18.382+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:08:18.382+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:08:18.383+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:08:18.390+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:08:18.742+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.22s           2025-03-31T16:08:18                      11
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           0           0                                                            0
+================================================================================
+[2025-03-31T16:08:49.495+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:08:49                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:08:29                      12
+================================================================================
+[2025-03-31T16:09:19.914+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:08:59                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:09:19                      12
+================================================================================
+[2025-03-31T16:09:49.312+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:09:49.899+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:09:49.899+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:09:49.900+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:09:49.900+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:09:49.908+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:09:50.227+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:09:50                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           0           0                                                            0
+================================================================================
+[2025-03-31T16:10:21.002+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:10:21.009+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:10:22.017+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:10:37.494+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:10:37.494+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:10:37.494+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:10:37.495+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:10:37.499+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:10:37.795+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:10:37                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           0           0                                                            0
+================================================================================
+[2025-03-31T16:13:31.200+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:13:46.717+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:13:46.718+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:13:46.719+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:13:46.719+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:13:46.725+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:13:47.066+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:13:47                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           0           0                                                            0
+================================================================================
+[2025-03-31T16:18:20.145+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:18:21.221+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:18:40.659+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:18:40.660+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:18:40.661+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:18:40.662+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:18:40.667+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:18:40.991+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:18:40                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T16:19:11.980+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T16:18:49                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:19:11                      12
+================================================================================
+[2025-03-31T16:19:43.182+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:19:19                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:19:43                      12
+================================================================================
+[2025-03-31T16:20:13.429+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:19:50                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:20:13                      12
+================================================================================
+[2025-03-31T16:20:43.703+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:20:43                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:20:21                      12
+================================================================================
+[2025-03-31T16:21:14.287+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:20:51                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:21:14                      12
+================================================================================
+[2025-03-31T16:21:44.897+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:21:44                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:21:21                      12
+================================================================================
+[2025-03-31T16:22:15.451+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:22:15                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:21:52                      12
+================================================================================
+[2025-03-31T16:22:45.972+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:22:45                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:22:22                      12
+================================================================================
+[2025-03-31T16:23:16.474+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:23:16                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:22:53                      12
+================================================================================
+[2025-03-31T16:27:45.820+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:27:46.253+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:27:46.253+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:27:46.254+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:27:46.254+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:27:46.259+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:27:46.556+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:27:46                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T16:32:29.710+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:32:30.048+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:32:30.049+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:32:30.049+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:32:30.049+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:32:30.054+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:32:30.357+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:32:30                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T16:33:01.456+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:33:01                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:32:36                      12
+================================================================================
+[2025-03-31T16:33:31.693+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.26s           2025-03-31T16:33:07                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:33:31                      12
+================================================================================
+[2025-03-31T16:34:01.920+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:34:01                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.12s           2025-03-31T16:33:37                      12
+================================================================================
+[2025-03-31T16:34:32.153+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:34:32                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:34:08                      12
+================================================================================
+[2025-03-31T16:35:02.376+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:35:02                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.12s           2025-03-31T16:34:39                      12
+================================================================================
+[2025-03-31T16:35:32.619+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.22s           2025-03-31T16:35:10                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:35:32                      12
+================================================================================
+[2025-03-31T16:36:02.867+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:35:40                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:36:02                      12
+================================================================================
+[2025-03-31T16:36:34.136+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:36:34                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.12s           2025-03-31T16:36:11                      12
+================================================================================
+[2025-03-31T16:37:04.849+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:36:42                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:37:04                      12
+================================================================================
+[2025-03-31T16:41:47.793+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:41:48.078+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:41:48.079+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:41:48.079+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:41:48.080+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:41:48.083+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:41:48.368+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:41:48                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T16:46:21.137+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:46:21.459+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:46:21.459+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:46:21.459+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:46:21.460+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:46:21.463+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:46:21.743+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:46:21                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T16:46:52.862+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:46:27                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:46:52                      12
+================================================================================
+[2025-03-31T16:47:23.099+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:47:23                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:46:58                      12
+================================================================================
+[2025-03-31T16:47:54.380+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:47:54                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:47:28                      12
+================================================================================
+[2025-03-31T16:48:24.593+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:48:24                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:47:59                      12
+================================================================================
+[2025-03-31T16:48:55.848+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:48:55                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:48:30                      12
+================================================================================
+[2025-03-31T16:49:26.645+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:49:01                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.12s           2025-03-31T16:49:26                      12
+================================================================================
+[2025-03-31T16:49:57.360+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:49:31                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:49:57                      12
+================================================================================
+[2025-03-31T16:50:28.292+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:50:28                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:50:02                      12
+================================================================================
+[2025-03-31T16:50:58.958+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T16:50:33                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:50:58                      12
+================================================================================
+[2025-03-31T16:51:21.500+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:51:21.504+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:55:40.860+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T16:55:41.196+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T16:55:41.196+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T16:55:41.197+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T16:55:41.197+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:55:41.201+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T16:55:41.620+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T16:55:41                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:00:18.762+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:00:19.098+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:00:19.098+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:00:19.098+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:00:19.099+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:00:19.103+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:00:19.599+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:00:19                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:00:50.461+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:00:50                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:00:25                      12
+================================================================================
+[2025-03-31T17:01:20.674+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:00:56                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:01:20                      12
+================================================================================
+[2025-03-31T17:01:51.838+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:01:27                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.11s           2025-03-31T17:01:51                      12
+================================================================================
+[2025-03-31T17:02:22.138+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:02:22                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.12s           2025-03-31T17:01:57                      12
+================================================================================
+[2025-03-31T17:02:53.394+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:02:28                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:02:53                      12
+================================================================================
+[2025-03-31T17:03:24.656+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:02:59                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:03:24                      12
+================================================================================
+[2025-03-31T17:03:55.564+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:03:29                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:03:55                      12
+================================================================================
+[2025-03-31T17:04:26.280+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:04:00                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:04:26                      12
+================================================================================
+[2025-03-31T17:04:56.966+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:04:56                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:04:31                      12
+================================================================================
+[2025-03-31T17:09:37.455+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:09:37.826+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:09:37.826+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:09:37.826+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:09:37.827+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:09:37.831+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:09:38.117+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:09:38                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:14:11.264+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:14:11.547+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:14:11.547+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:14:11.547+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:14:11.548+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:14:11.554+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:14:11.741+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.11s           2025-03-31T17:14:11                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:14:42.723+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:14:17                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:14:42                      12
+================================================================================
+[2025-03-31T17:15:13.087+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:15:13                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:14:48                      12
+================================================================================
+[2025-03-31T17:15:44.190+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:15:44                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.12s           2025-03-31T17:15:18                      12
+================================================================================
+[2025-03-31T17:16:14.556+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:16:14                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.12s           2025-03-31T17:15:49                      12
+================================================================================
+[2025-03-31T17:16:45.713+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.27s           2025-03-31T17:16:20                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:16:45                      12
+================================================================================
+[2025-03-31T17:17:15.928+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:16:50                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.12s           2025-03-31T17:17:15                      12
+================================================================================
+[2025-03-31T17:17:46.231+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:17:46                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:17:21                      12
+================================================================================
+[2025-03-31T17:18:17.665+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.32s           2025-03-31T17:18:17                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.11s           2025-03-31T17:17:52                      12
+================================================================================
+[2025-03-31T17:18:48.401+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:18:23                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.11s           2025-03-31T17:18:48                      12
+================================================================================
+[2025-03-31T17:19:45.735+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:19:46.757+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:20:04.077+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:20:04.078+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:20:04.078+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:20:04.079+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:20:04.084+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:20:04.400+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:20:04                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:24:35.811+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:24:36.141+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:24:36.142+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:24:36.142+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:24:36.143+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:24:36.148+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:24:36.433+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:24:36                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:25:06.702+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:25:06                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:24:40                      12
+================================================================================
+[2025-03-31T17:25:37.338+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:25:11                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.12s           2025-03-31T17:25:37                      12
+================================================================================
+[2025-03-31T17:26:08.100+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:26:08                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.11s           2025-03-31T17:25:41                      12
+================================================================================
+[2025-03-31T17:26:38.868+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:26:12                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:26:38                      12
+================================================================================
+[2025-03-31T17:27:09.571+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:27:09                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:26:43                      12
+================================================================================
+[2025-03-31T17:27:40.367+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.41s           2025-03-31T17:27:14                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:27:40                      12
+================================================================================
+[2025-03-31T17:28:11.006+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:28:11                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:27:44                      12
+================================================================================
+[2025-03-31T17:28:41.748+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:28:41                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:28:15                      12
+================================================================================
+[2025-03-31T17:29:12.427+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:28:46                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:29:12                      12
+================================================================================
+[2025-03-31T17:30:47.170+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:30:48.197+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:31:16.720+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:31:16.722+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:31:16.722+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:31:16.723+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:31:16.736+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:31:17.116+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.22s           2025-03-31T17:31:17                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:35:48.012+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:35:48.374+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:35:48.375+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:35:48.375+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:35:48.375+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:35:48.387+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:35:48.751+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:35:48                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:40:22.057+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:40:22.340+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:40:22.341+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:40:22.341+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:40:22.341+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:40:22.346+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:40:22.533+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.11s           2025-03-31T17:40:22                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:40:53.007+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:40:23                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:40:53                      12
+================================================================================
+[2025-03-31T17:41:23.710+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:40:54                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:41:23                      12
+================================================================================
+[2025-03-31T17:41:54.225+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:41:25                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:41:54                      12
+================================================================================
+[2025-03-31T17:42:24.754+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:42:24                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:41:55                      12
+================================================================================
+[2025-03-31T17:42:55.264+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.31s           2025-03-31T17:42:55                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:42:26                      12
+================================================================================
+[2025-03-31T17:43:25.672+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.31s           2025-03-31T17:42:56                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:43:25                      12
+================================================================================
+[2025-03-31T17:43:56.090+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:43:56                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:43:26                      12
+================================================================================
+[2025-03-31T17:44:26.520+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:44:26                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.11s           2025-03-31T17:43:57                      12
+================================================================================
+[2025-03-31T17:44:56.950+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:44:56                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:44:27                      12
+================================================================================
+[2025-03-31T17:46:26.486+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:46:27.508+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:46:45.136+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:46:45.141+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:46:45.143+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:46:45.144+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:46:45.149+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:46:45.658+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.41s           2025-03-31T17:46:45                      34
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:48:01.948+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:48:02.323+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:48:02.323+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:48:02.324+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:48:02.324+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:48:02.330+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:48:02.607+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:48:02                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:49:12.324+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:49:12.606+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:49:12.606+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:49:12.606+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:49:12.607+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:49:12.610+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:49:12.796+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.11s           2025-03-31T17:49:12                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:49:52.240+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:49:53.297+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:50:09.521+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:50:09.522+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:50:09.522+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:50:09.523+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:50:09.527+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:50:09.834+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:50:09                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:50:40.997+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:50:11                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:50:40                      12
+================================================================================
+[2025-03-31T17:51:11.454+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:50:42                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:51:11                      12
+================================================================================
+[2025-03-31T17:51:41.915+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:51:41                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:51:12                      12
+================================================================================
+[2025-03-31T17:52:12.374+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:51:43                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:52:12                      12
+================================================================================
+[2025-03-31T17:52:42.714+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:52:13                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:52:42                      12
+================================================================================
+[2025-03-31T17:53:15.323+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:52:43                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:53:15                      12
+================================================================================
+[2025-03-31T17:53:45.264+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:54:02.479+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:54:02.481+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:54:02.481+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:54:02.481+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:54:02.486+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:54:02.796+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:54:02                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:54:33.975+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:54:04                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:54:33                      12
+================================================================================
+[2025-03-31T17:55:55.914+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:55:56.197+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:55:56.197+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:55:56.197+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:55:56.198+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:55:56.201+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:55:56.480+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:55:56                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:56:47.431+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:57:05.731+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:57:05.732+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:57:05.732+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:57:05.733+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:57:05.738+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:57:06.080+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.22s           2025-03-31T17:57:06                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:57:08.549+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:58:38.043+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2025-03-31T17:58:38.045+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-03-31T17:58:38.045+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-03-31T17:58:38.045+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:58:38.055+0000] {manager.py:824} INFO - There are 2 files in /home/ubuntu/MLFlow/dags
+[2025-03-31T17:58:38.572+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.32s           2025-03-31T17:58:38                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   0           0                                                            0
+================================================================================
+[2025-03-31T17:59:09.119+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.68s           2025-03-31T17:58:49                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:59:09                      12
+================================================================================
+[2025-03-31T17:59:40.211+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T17:59:40                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:59:19                      12
+================================================================================
+[2025-03-31T18:00:10.847+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T18:00:10                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T17:59:50                      12
+================================================================================
+[2025-03-31T18:00:41.461+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T18:00:41                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T18:00:21                      12
+================================================================================
+[2025-03-31T18:01:11.758+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.44s           2025-03-31T18:00:51                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T18:01:11                      12
+================================================================================
+[2025-03-31T18:01:42.580+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                   1           0  0.21s           2025-03-31T18:01:22                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                           1           0  0.21s           2025-03-31T18:01:42                      12
+================================================================================

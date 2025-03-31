@@ -29,6 +29,8 @@ try:
     [core]
     dags_folder = {dags_folder}
     load_examples = False
+    executor = SequentialExecutor
+    task_execution_timeout = 120
 
     [database]
     sql_alchemy_conn = sqlite:////{db_path}

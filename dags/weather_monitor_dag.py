@@ -1,4 +1,5 @@
-#dags/weather_monitor_dag.py
+# dags/weather_monitor_dag.py
+# Added comment to force re-parse
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.operators.bash import BashOperator
@@ -37,16 +38,9 @@ with DAG(
     )
 
     
-    monitor_data = DockerOperator(
+    monitor_data = BashOperator(
         task_id='monitor_data',
-        image='weather-monitor:light',
-        api_version='auto',
-        auto_remove="force",
-        command=["python", "-m", "src.monitoring.monitor_script"],
-        docker_url='unix://var/run/docker.sock',
-        network_mode='bridge',
-        mounts=[Mount(target='/data', source=str(data_storage), type='bind')],
-        working_dir='/app',
+        bash_command='sleep 60'
     )
 
     

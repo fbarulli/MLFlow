@@ -3,32 +3,27 @@
 ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
 ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
-[2025-03-31T16:08:03.407+0000] {executor_loader.py:258} INFO - Loaded executor: SequentialExecutor
-[2025-03-31 16:08:03 +0000] [20755] [INFO] Starting gunicorn 23.0.0
-[2025-03-31T16:08:03.488+0000] {scheduler_job_runner.py:950} INFO - Starting the scheduler
-[2025-03-31T16:08:03.490+0000] {scheduler_job_runner.py:957} INFO - Processing each file at most -1 times
-[2025-03-31 16:08:03 +0000] [20755] [INFO] Listening at: http://[::]:8793 (20755)
-[2025-03-31 16:08:03 +0000] [20755] [INFO] Using worker: sync
-[2025-03-31 16:08:03 +0000] [20756] [INFO] Booting worker with pid: 20756
-[2025-03-31T16:08:03.509+0000] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 20757
-[2025-03-31T16:08:03.512+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
-[2025-03-31T16:08:03.529+0000] {settings.py:63} INFO - Configured default timezone UTC
-[2025-03-31T16:08:03.548+0000] {scheduler_job_runner.py:2012} INFO - Reset the following 1 orphaned TaskInstances:
-	<TaskInstance: weather_data_monitoring.monitor_data scheduled__2025-03-31T16:04:00+00:00 [running]>
-[2025-03-31T16:08:03.611+0000] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
-[2025-03-31 16:08:03 +0000] [20759] [INFO] Booting worker with pid: 20759
-[2025-03-31T16:08:04.224+0000] {scheduler_job_runner.py:1526} INFO - DAG weather_data_collection is at (or above) max_active_runs (1 of 1), not creating any more runs
-[2025-03-31T16:08:04.365+0000] {scheduler_job_runner.py:435} INFO - 2 tasks up for execution:
-	<TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-03-31T16:07:00+00:00 [scheduled]>
-	<TaskInstance: weather_data_monitoring.monitor_data scheduled__2025-03-31T16:04:00+00:00 [scheduled]>
-[2025-03-31T16:08:04.366+0000] {scheduler_job_runner.py:507} INFO - DAG weather_data_collection has 0/16 running and queued tasks
-[2025-03-31T16:08:04.366+0000] {scheduler_job_runner.py:507} INFO - DAG weather_data_monitoring has 0/16 running and queued tasks
-[2025-03-31T16:08:04.367+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
-	<TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-03-31T16:07:00+00:00 [scheduled]>
-	<TaskInstance: weather_data_monitoring.monitor_data scheduled__2025-03-31T16:04:00+00:00 [scheduled]>
-[2025-03-31T16:08:04.375+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-03-31T16:07:00+00:00 [scheduled]>, <TaskInstance: weather_data_monitoring.monitor_data scheduled__2025-03-31T16:04:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
-[2025-03-31T16:08:04.376+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='weather_data_collection', task_id='collect_weather_data', run_id='scheduled__2025-03-31T16:07:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
-[2025-03-31T16:08:04.377+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'weather_data_collection', 'collect_weather_data', 'scheduled__2025-03-31T16:07:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/weather_dag.py']
-[2025-03-31T16:08:04.377+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='weather_data_monitoring', task_id='monitor_data', run_id='scheduled__2025-03-31T16:04:00+00:00', try_number=2, map_index=-1) to SequentialExecutor with priority 1 and queue default
-[2025-03-31T16:08:04.379+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'weather_data_monitoring', 'monitor_data', 'scheduled__2025-03-31T16:04:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/weather_monitor_dag.py']
-[2025-03-31T16:08:04.391+0000] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'weather_data_collection', 'collect_weather_data', 'scheduled__2025-03-31T16:07:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/weather_dag.py']
+[2025-03-31T17:57:05.521+0000] {executor_loader.py:258} INFO - Loaded executor: SequentialExecutor
+[2025-03-31 17:57:05 +0000] [31697] [INFO] Starting gunicorn 23.0.0
+[2025-03-31 17:57:05 +0000] [31697] [INFO] Listening at: http://[::]:8793 (31697)
+[2025-03-31 17:57:05 +0000] [31697] [INFO] Using worker: sync
+[2025-03-31T17:57:05.621+0000] {scheduler_job_runner.py:950} INFO - Starting the scheduler
+[2025-03-31T17:57:05.622+0000] {scheduler_job_runner.py:957} INFO - Processing each file at most -1 times
+[2025-03-31 17:57:05 +0000] [31698] [INFO] Booting worker with pid: 31698
+[2025-03-31T17:57:05.640+0000] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 31699
+[2025-03-31T17:57:05.643+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-31T17:57:05.656+0000] {settings.py:63} INFO - Configured default timezone UTC
+[2025-03-31 17:57:05 +0000] [31700] [INFO] Booting worker with pid: 31700
+[2025-03-31T17:57:05.730+0000] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2025-03-31T17:57:08.548+0000] {scheduler_job_runner.py:272} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-31T17:57:09.643+0000] {process_utils.py:132} INFO - Sending 15 to group 31699. PIDs of all processes in the group: [31699]
+[2025-03-31T17:57:09.665+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 31699
+[2025-03-31T17:57:09.674+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=31699, status='terminated', exitcode=0, started='17:57:04') (31699) terminated with exit code 0
+[2025-03-31T17:57:09.719+0000] {process_utils.py:132} INFO - Sending 15 to group 31699. PIDs of all processes in the group: []
+[2025-03-31T17:57:09.733+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 31699
+[2025-03-31T17:57:09.737+0000] {process_utils.py:101} INFO - Sending the signal 15 to process 31699 as process group is missing.
+[2025-03-31T17:57:09.742+0000] {scheduler_job_runner.py:1029} INFO - Exited execute loop
+[2025-03-31 17:57:09 +0000] [31697] [INFO] Handling signal: term
+[2025-03-31 17:57:09 +0000] [31698] [INFO] Worker exiting (pid: 31698)
+[2025-03-31 17:57:09 +0000] [31700] [INFO] Worker exiting (pid: 31700)
+[2025-03-31 17:57:09 +0000] [31697] [INFO] Shutting down: Master

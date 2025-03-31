@@ -1,0 +1,8 @@
+2025-03-31 16:10:25,371 ERROR - [0 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2025-03-31 16:18:20,068 INFO - Received signal: 15. Closing gunicorn.
+2025-03-31 17:19:45,674 INFO - Received signal: 15. Closing gunicorn.
+2025-03-31 17:30:47,097 INFO - Received signal: 15. Closing gunicorn.
+2025-03-31 17:49:52,182 INFO - Received signal: 15. Closing gunicorn.
+2025-03-31 17:53:45,206 INFO - Received signal: 15. Closing gunicorn.
+2025-03-31 17:56:47,416 INFO - Received signal: 15. Closing gunicorn.
+2025-03-31 17:57:08,531 INFO - Received signal: 15. Closing gunicorn.

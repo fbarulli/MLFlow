@@ -34,6 +34,10 @@ cat > .dvc/config << EOF
     password = 51787e96187f806133bd849bc8c772b9c47c11ea
 EOF
 
+# Set origin as the default remote
+echo "Setting 'origin' as default DVC remote..."
+dvc remote default origin
+
 # Verify configuration
 echo "Verifying DVC configuration..."
 if ! dvc remote list | grep -q "origin"; then
@@ -46,3 +50,4 @@ if ! dvc status; then
     exit 1
 fi
 echo "DVC configured with remote: $EXPECTED_URL"
+echo "Default remote set to: origin"
