@@ -1,0 +1,286 @@
+city,country,main_temp,main_pressure,main_humidity,weather_description,datetime
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:26:10
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:26:10
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:26:10
+Berlin,DE,9.7,1009,66,clear sky,2025-03-28T19:26:10
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:26:10
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:26:23
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:26:23
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:26:23
+Berlin,DE,9.7,1009,66,clear sky,2025-03-28T19:26:23
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:26:23
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:27:10
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:27:10
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:27:10
+Berlin,DE,9.7,1009,66,clear sky,2025-03-28T19:27:10
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:27:10
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:27:16
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:27:16
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:27:16
+Berlin,DE,9.7,1009,66,clear sky,2025-03-28T19:27:16
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:27:16
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:29:42
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:29:42
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:29:42
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:29:42
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:29:42
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:29:48
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:29:48
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:29:48
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:29:48
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:29:48
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:30:05
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:30:05
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:30:05
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:30:05
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:30:05
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:30:29
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:30:29
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:30:29
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:30:29
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:30:29
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:30:35
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:30:35
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:30:35
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:30:35
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:30:35
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:30:52
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:30:52
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:30:52
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:30:52
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:30:52
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:31:27
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:31:27
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:31:27
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:31:27
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:31:27
+Paris,FR,9.05,1013,91,moderate rain,2025-03-28T19:32:09
+London,GB,10.22,1014,48,clear sky,2025-03-28T19:32:09
+New York,US,16.81,1020,35,broken clouds,2025-03-28T19:32:09
+Berlin,DE,9.66,1009,66,clear sky,2025-03-28T19:32:09
+Tokyo,JP,11.11,1010,84,broken clouds,2025-03-28T19:32:09
+Paris,FR,9.04,1014,91,moderate rain,2025-03-28T19:33:09
+London,GB,10.17,1014,48,clear sky,2025-03-28T19:33:09
+New York,US,16.71,1019,35,broken clouds,2025-03-28T19:33:09
+Berlin,DE,10.77,1010,62,clear sky,2025-03-28T19:33:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:33:09
+Paris,FR,9.04,1014,91,moderate rain,2025-03-28T19:34:09
+London,GB,10.17,1014,48,clear sky,2025-03-28T19:34:09
+New York,US,16.71,1019,35,broken clouds,2025-03-28T19:34:09
+Berlin,DE,10.77,1010,62,clear sky,2025-03-28T19:34:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:34:09
+Paris,FR,9.04,1014,91,moderate rain,2025-03-28T19:35:11
+London,GB,10.17,1014,48,clear sky,2025-03-28T19:35:11
+New York,US,16.71,1019,35,broken clouds,2025-03-28T19:35:11
+Berlin,DE,10.77,1010,62,clear sky,2025-03-28T19:35:11
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:35:11
+Paris,FR,9.04,1014,91,moderate rain,2025-03-28T19:36:15
+London,GB,10.17,1014,48,clear sky,2025-03-28T19:36:15
+New York,US,16.71,1019,35,broken clouds,2025-03-28T19:36:15
+Berlin,DE,10.77,1010,62,clear sky,2025-03-28T19:36:15
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:36:15
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:37:09
+London,GB,9.89,1015,49,clear sky,2025-03-28T19:37:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:37:09
+Berlin,DE,9.43,1010,67,clear sky,2025-03-28T19:37:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:37:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:38:09
+London,GB,9.89,1015,49,clear sky,2025-03-28T19:38:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:38:09
+Berlin,DE,9.43,1010,67,clear sky,2025-03-28T19:38:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:38:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:39:09
+London,GB,9.89,1015,49,clear sky,2025-03-28T19:39:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:39:09
+Berlin,DE,9.43,1010,67,clear sky,2025-03-28T19:39:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:39:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:40:10
+London,GB,9.89,1015,49,clear sky,2025-03-28T19:40:10
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:40:10
+Berlin,DE,9.43,1010,67,clear sky,2025-03-28T19:40:10
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:40:10
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:43:25
+London,GB,9.82,1015,49,clear sky,2025-03-28T19:43:25
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:43:25
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:43:25
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:43:25
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:43:37
+London,GB,9.82,1015,49,clear sky,2025-03-28T19:43:37
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:43:37
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:43:37
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:43:37
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:44:09
+London,GB,9.82,1015,49,clear sky,2025-03-28T19:44:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:44:09
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:44:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:44:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:45:09
+London,GB,9.82,1015,49,clear sky,2025-03-28T19:45:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:45:09
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:45:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:45:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:46:09
+London,GB,9.82,1015,49,clear sky,2025-03-28T19:46:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:46:09
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:46:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:46:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:47:09
+London,GB,9.82,1015,49,clear sky,2025-03-28T19:47:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:47:09
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:47:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:47:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:48:09
+London,GB,9.82,1015,49,clear sky,2025-03-28T19:48:09
+New York,US,16.7,1019,35,broken clouds,2025-03-28T19:48:09
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:48:09
+Tokyo,JP,11.11,1011,84,broken clouds,2025-03-28T19:48:09
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:49:17
+London,GB,9.69,1015,50,clear sky,2025-03-28T19:49:17
+New York,US,16.79,1019,35,broken clouds,2025-03-28T19:49:17
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:49:17
+Tokyo,JP,10.96,1011,85,broken clouds,2025-03-28T19:49:17
+Paris,FR,9.04,1014,91,light rain,2025-03-28T19:50:10
+London,GB,9.69,1015,50,clear sky,2025-03-28T19:50:10
+New York,US,16.79,1019,35,broken clouds,2025-03-28T19:50:10
+Berlin,DE,9.44,1010,69,clear sky,2025-03-28T19:50:10
+Tokyo,JP,10.96,1011,85,broken clouds,2025-03-28T19:50:10
+Paris,FR,15.49,1026,43,clear sky,2025-03-31T15:11:20
+London,GB,16.84,1028,48,few clouds,2025-03-31T15:11:20
+New York,US,15.33,1006,86,overcast clouds,2025-03-31T15:11:20
+Berlin,DE,9.31,1022,73,light rain,2025-03-31T15:11:20
+Tokyo,JP,5.69,1029,79,broken clouds,2025-03-31T15:11:20
+Paris,FR,15.49,1026,43,clear sky,2025-03-31T15:17:00
+London,GB,16.82,1028,48,few clouds,2025-03-31T15:17:00
+New York,US,15.44,1006,86,overcast clouds,2025-03-31T15:17:00
+Berlin,DE,9.23,1022,73,light rain,2025-03-31T15:17:00
+Tokyo,JP,5.69,1029,79,broken clouds,2025-03-31T15:17:00
+Paris,FR,15.49,1026,43,clear sky,2025-03-31T15:25:07
+London,GB,16.82,1028,48,few clouds,2025-03-31T15:25:07
+New York,US,15.44,1006,86,overcast clouds,2025-03-31T15:25:07
+Berlin,DE,9.23,1022,73,light rain,2025-03-31T15:25:07
+Tokyo,JP,5.69,1029,79,broken clouds,2025-03-31T15:25:07
+Paris,FR,15.58,1025,42,clear sky,2025-03-31T15:38:59
+London,GB,16.72,1028,48,few clouds,2025-03-31T15:38:59
+New York,US,16.24,1006,83,overcast clouds,2025-03-31T15:38:59
+Berlin,DE,8.68,1023,77,light rain,2025-03-31T15:38:59
+Tokyo,JP,5.35,1029,82,overcast clouds,2025-03-31T15:38:59
+Paris,FR,15.55,1025,41,clear sky,2025-03-31T16:08:12
+London,GB,16.85,1028,48,few clouds,2025-03-31T16:08:12
+New York,US,16.29,1005,83,overcast clouds,2025-03-31T16:08:12
+Berlin,DE,8.09,1023,81,overcast clouds,2025-03-31T16:08:12
+Tokyo,JP,5.15,1029,83,light rain,2025-03-31T16:08:12
+Paris,FR,15.55,1025,41,clear sky,2025-03-31T16:14:04
+London,GB,16.89,1028,48,few clouds,2025-03-31T16:14:04
+New York,US,16.38,1005,83,overcast clouds,2025-03-31T16:14:04
+Berlin,DE,8.14,1023,81,overcast clouds,2025-03-31T16:14:04
+Tokyo,JP,5.15,1029,83,light rain,2025-03-31T16:14:04
+Paris,FR,15.62,1025,40,clear sky,2025-03-31T16:28:07
+London,GB,16.59,1028,50,few clouds,2025-03-31T16:28:07
+New York,US,16.89,1005,82,overcast clouds,2025-03-31T16:28:07
+Berlin,DE,7.94,1023,81,overcast clouds,2025-03-31T16:28:07
+Tokyo,JP,4.97,1029,87,light rain,2025-03-31T16:28:07
+Paris,FR,15.58,1025,40,clear sky,2025-03-31T16:42:02
+London,GB,16.07,1028,52,few clouds,2025-03-31T16:42:02
+New York,US,19.05,1005,77,overcast clouds,2025-03-31T16:42:02
+Berlin,DE,7.88,1023,80,overcast clouds,2025-03-31T16:42:02
+Tokyo,JP,4.82,1029,87,moderate rain,2025-03-31T16:42:02
+Paris,FR,15.39,1025,40,clear sky,2025-03-31T16:55:55
+London,GB,15.88,1028,53,few clouds,2025-03-31T16:55:55
+New York,US,18.8,1005,76,overcast clouds,2025-03-31T16:55:55
+Berlin,DE,7.93,1023,80,broken clouds,2025-03-31T16:55:55
+Tokyo,JP,4.81,1029,86,moderate rain,2025-03-31T16:55:55
+Paris,FR,15.3,1025,41,clear sky,2025-03-31T17:09:51
+London,GB,15.48,1028,55,few clouds,2025-03-31T17:09:51
+New York,US,19.59,1004,73,overcast clouds,2025-03-31T17:09:51
+Berlin,DE,8.0,1023,78,few clouds,2025-03-31T17:09:51
+Tokyo,JP,4.81,1029,86,moderate rain,2025-03-31T17:09:51
+Paris,FR,15.09,1025,42,clear sky,2025-03-31T17:20:17
+London,GB,15.19,1028,55,few clouds,2025-03-31T17:20:17
+New York,US,19.93,1004,71,overcast clouds,2025-03-31T17:20:17
+Berlin,DE,8.04,1024,77,few clouds,2025-03-31T17:20:17
+Tokyo,JP,4.81,1029,86,moderate rain,2025-03-31T17:20:17
+Paris,FR,15.03,1025,42,clear sky,2025-03-31T17:35:55
+London,GB,15.53,1028,52,few clouds,2025-03-31T17:35:55
+New York,US,21.07,1004,69,overcast clouds,2025-03-31T17:35:55
+Berlin,DE,7.94,1024,80,few clouds,2025-03-31T17:35:55
+Tokyo,JP,4.84,1028,85,moderate rain,2025-03-31T17:35:55
+Paris,FR,15.03,1025,42,clear sky,2025-03-31T17:41:12
+London,GB,15.07,1028,52,few clouds,2025-03-31T17:41:12
+New York,US,21.11,1004,68,overcast clouds,2025-03-31T17:41:12
+Berlin,DE,7.83,1024,80,scattered clouds,2025-03-31T17:41:12
+Tokyo,JP,4.8,1028,85,moderate rain,2025-03-31T17:41:12
+Paris,FR,14.36,1025,43,clear sky,2025-03-31T17:46:57
+London,GB,15.4,1028,51,few clouds,2025-03-31T17:46:57
+New York,US,21.26,1004,68,overcast clouds,2025-03-31T17:46:57
+Berlin,DE,7.96,1024,80,scattered clouds,2025-03-31T17:46:57
+Tokyo,JP,4.8,1028,85,moderate rain,2025-03-31T17:46:57
+Paris,FR,14.33,1025,43,clear sky,2025-03-31T17:53:14
+London,GB,13.95,1028,60,few clouds,2025-03-31T17:53:14
+New York,US,22.19,1004,65,overcast clouds,2025-03-31T17:53:14
+Berlin,DE,7.96,1024,80,scattered clouds,2025-03-31T17:53:14
+Tokyo,JP,4.94,1028,85,light rain,2025-03-31T17:53:14
+Paris,FR,14.33,1025,43,clear sky,2025-03-31T17:58:58
+London,GB,13.57,1028,59,few clouds,2025-03-31T17:58:58
+New York,US,22.18,1004,65,overcast clouds,2025-03-31T17:58:58
+Berlin,DE,7.93,1024,80,scattered clouds,2025-03-31T17:58:58
+Tokyo,JP,4.94,1028,85,moderate rain,2025-03-31T17:58:58
+Paris,FR,17.9,1013,40,clear sky,2025-04-02T16:11:35
+London,GB,15.93,1019,47,scattered clouds,2025-04-02T16:11:35
+New York,US,7.57,1032,43,clear sky,2025-04-02T16:11:35
+Berlin,DE,16.12,1026,43,clear sky,2025-04-02T16:11:35
+Tokyo,JP,9.4,1015,74,broken clouds,2025-04-02T16:11:35
+Paris,FR,17.96,1013,41,clear sky,2025-04-02T16:31:09
+London,GB,15.51,1019,49,broken clouds,2025-04-02T16:31:09
+New York,US,7.94,1032,45,clear sky,2025-04-02T16:31:09
+Berlin,DE,16.1,1026,43,clear sky,2025-04-02T16:31:09
+Tokyo,JP,9.4,1015,75,broken clouds,2025-04-02T16:31:09
+Paris,FR,17.92,1013,41,clear sky,2025-04-02T16:37:55
+London,GB,15.35,1019,49,broken clouds,2025-04-02T16:37:55
+New York,US,7.98,1032,45,clear sky,2025-04-02T16:37:55
+Berlin,DE,15.86,1026,45,clear sky,2025-04-02T16:37:55
+Tokyo,JP,9.22,1015,75,broken clouds,2025-04-02T16:37:55
+Paris,FR,17.87,1013,40,clear sky,2025-04-02T16:44:37
+London,GB,15.2,1019,49,broken clouds,2025-04-02T16:44:37
+New York,US,7.88,1032,45,clear sky,2025-04-02T16:44:37
+Berlin,DE,15.78,1026,44,clear sky,2025-04-02T16:44:37
+Tokyo,JP,9.22,1015,75,broken clouds,2025-04-02T16:44:37
+Paris,FR,18.13,1013,40,clear sky,2025-04-02T16:50:49
+London,GB,15.09,1019,50,broken clouds,2025-04-02T16:50:49
+New York,US,8.01,1032,45,clear sky,2025-04-02T16:50:49
+Berlin,DE,15.63,1026,42,clear sky,2025-04-02T16:50:49
+Tokyo,JP,9.22,1015,76,broken clouds,2025-04-02T16:50:49
+Paris,FR,18.11,1013,40,clear sky,2025-04-02T16:57:16
+London,GB,15.06,1019,50,broken clouds,2025-04-02T16:57:16
+New York,US,8.0,1032,46,clear sky,2025-04-02T16:57:16
+Berlin,DE,15.59,1026,43,clear sky,2025-04-02T16:57:16
+Tokyo,JP,9.22,1015,77,broken clouds,2025-04-02T16:57:16
+Paris,FR,18.11,1013,40,clear sky,2025-04-02T16:58:06
+London,GB,15.06,1019,50,broken clouds,2025-04-02T16:58:06
+New York,US,8.0,1032,46,clear sky,2025-04-02T16:58:06
+Berlin,DE,15.59,1026,43,clear sky,2025-04-02T16:58:06
+Tokyo,JP,9.22,1015,77,broken clouds,2025-04-02T16:58:06
+Paris,FR,18.13,1013,40,clear sky,2025-04-02T16:59:30
+London,GB,15.09,1019,50,broken clouds,2025-04-02T16:59:30
+New York,US,8.01,1032,45,clear sky,2025-04-02T16:59:30
+Berlin,DE,15.63,1026,42,clear sky,2025-04-02T16:59:30
+Tokyo,JP,9.22,1015,76,broken clouds,2025-04-02T16:59:30
+Paris,FR,18.11,1013,40,clear sky,2025-04-02T17:00:54
+London,GB,15.02,1019,50,broken clouds,2025-04-02T17:00:54
+New York,US,8.01,1032,46,clear sky,2025-04-02T17:00:54
+Berlin,DE,15.48,1026,42,clear sky,2025-04-02T17:00:54
+Tokyo,JP,9.22,1015,77,broken clouds,2025-04-02T17:00:54
+Paris,FR,18.11,1013,40,clear sky,2025-04-02T17:02:19
+London,GB,15.02,1019,50,broken clouds,2025-04-02T17:02:19
+New York,US,8.01,1032,46,clear sky,2025-04-02T17:02:19
+Berlin,DE,15.48,1026,42,clear sky,2025-04-02T17:02:19
+Tokyo,JP,9.22,1015,77,broken clouds,2025-04-02T17:02:19
+Paris,FR,18.11,1013,40,clear sky,2025-04-02T17:03:44
+London,GB,15.02,1019,50,broken clouds,2025-04-02T17:03:44
+New York,US,8.01,1032,46,clear sky,2025-04-02T17:03:44
+Berlin,DE,15.48,1026,42,clear sky,2025-04-02T17:03:44
+Tokyo,JP,9.22,1015,77,broken clouds,2025-04-02T17:03:44
+Paris,FR,17.66,1013,42,clear sky,2025-04-02T17:19:19
+London,GB,14.75,1019,52,broken clouds,2025-04-02T17:19:19
+New York,US,7.81,1032,47,clear sky,2025-04-02T17:19:19
+Berlin,DE,15.21,1026,45,clear sky,2025-04-02T17:19:19
+Tokyo,JP,9.07,1015,76,broken clouds,2025-04-02T17:19:19

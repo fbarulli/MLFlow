@@ -1,21 +1,44 @@
 #dags/weather_dag.py
+import os
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.operators.python import PythonOperator
+from airflow.exceptions import AirflowException
 from datetime import datetime, timedelta
 from pathlib import Path
 from docker.types import Mount
 from airflow_custom_hooks.dvc_hook import DVCHook
 
-def version_weather_data(project_root, run_id):
+def validate_airflow_home():
+    """Validate AIRFLOW_HOME environment variable and path."""
+    if "AIRFLOW_HOME" not in os.environ:
+        raise AirflowException("AIRFLOW_HOME environment variable is not set")
+    
+    airflow_home = Path(os.environ["AIRFLOW_HOME"])
+    if not airflow_home.exists():
+        raise AirflowException(f"AIRFLOW_HOME path does not exist: {airflow_home}")
+    
+    required_dirs = ["dags", "logs", "data_storage"]
+    for dir_name in required_dirs:
+        if not (airflow_home / dir_name).exists():
+            raise AirflowException(f"Required directory '{dir_name}' not found in AIRFLOW_HOME")
+    
+    return airflow_home
+
+def version_weather_data(run_id):
     """Version weather data using DVC hook"""
+    # The hook now manages its own cwd based on AIRFLOW_HOME
     hook = DVCHook()
     hook.add_and_push(
         filepath="data_storage/raw/weather.csv",
-        cwd=project_root,
-        commit=True,
+        commit=False, # Commit is ignored anyway
         message=f"Update weather data for run {run_id}"
     )
+
+# Get project paths
+project_root = validate_airflow_home()
+data_storage = project_root / "data_storage" / "raw"
+log_folder = project_root / "logs"
 
 default_args = {
     'owner': 'airflow',
@@ -25,10 +48,6 @@ default_args = {
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
-
-project_root = Path(__file__).resolve().parent.parent
-data_storage = project_root / "data_storage" / "raw"
-log_folder = project_root / "logs"
 
 with DAG(
     'weather_data_collection',
@@ -56,7 +75,6 @@ with DAG(
         task_id='version_data',
         python_callable=version_weather_data,
         op_kwargs={
-            'project_root': str(project_root),
             'run_id': '{{ run_id }}'
         }
     )

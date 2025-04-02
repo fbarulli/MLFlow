@@ -1,66 +1,152 @@
 from typing import Optional
-import configparser
 from pathlib import Path
 from airflow.hooks.base import BaseHook
 import subprocess
 import os
+import time
+import shutil
 
 class DVCHook(BaseHook):
     """
-    Hook for interacting with DVC using credentials from DVC config file.
+    Hook for interacting with DVC.
+    Ensures DVC is initialized and configured before running commands.
     """
     
-    def __init__(self) -> None:
+    def __init__(self, cwd: Optional[str] = None) -> None:
         super().__init__()
-        self._read_dvc_config()
-    
+        self.cwd = cwd or os.environ.get("AIRFLOW_HOME")
+        if not self.cwd:
+            raise ValueError("Could not determine working directory (cwd or AIRFLOW_HOME)")
+        self.cwd_path = Path(self.cwd)
+        self._setup_dvc()
+        self._read_dvc_config() # Keep this to set instance variables if needed
+
+    def _setup_dvc(self) -> None:
+        """Initialize DVC and configure remote if not already set up."""
+        dvc_dir = self.cwd_path / ".dvc"
+        
+        if not dvc_dir.exists():
+            self.log.info(f"Initializing DVC in {self.cwd} without git...")
+            try:
+                subprocess.run(
+                    ["dvc", "init", "--no-scm"], 
+                    cwd=self.cwd, 
+                    check=True, 
+                    capture_output=True, 
+                    text=True
+                )
+            except subprocess.CalledProcessError as e:
+                self.log.error(f"DVC init failed: {e.stderr}")
+                raise
+        else:
+            self.log.info(f"DVC already initialized in {self.cwd}")
+
+        # Configure DVC remote using dvc config commands
+        try:
+            self.log.info("Configuring DVC remote 'origin'...")
+            subprocess.run(
+                ["dvc", "remote", "add", "-d", "origin", "https://dagshub.com/fbarulli/MLFlow.dvc"],
+                cwd=self.cwd, check=True, capture_output=True, text=True
+            )
+            subprocess.run(
+                ["dvc", "remote", "modify", "origin", "--local", "auth", "basic"],
+                cwd=self.cwd, check=True, capture_output=True, text=True
+            )
+            subprocess.run(
+                ["dvc", "remote", "modify", "origin", "--local", "user", "fbarulli"],
+                cwd=self.cwd, check=True, capture_output=True, text=True
+            )
+            subprocess.run(
+                ["dvc", "remote", "modify", "origin", "--local", "password", "dhp_PF4M7kHEXdFW8WGDGXrXnRuP"],
+                cwd=self.cwd, check=True, capture_output=True, text=True
+            )
+            self.log.info("DVC remote 'origin' configured successfully.")
+        except subprocess.CalledProcessError as e:
+            # Check if the error is because the remote already exists
+            if "already exists" in e.stderr:
+                 self.log.warning(f"DVC remote 'origin' already configured: {e.stderr}")
+            else:
+                self.log.error(f"DVC remote configuration failed: {e.stderr}")
+                raise
+
     def _read_dvc_config(self) -> None:
-        """Read credentials from DVC config file"""
-        config = configparser.ConfigParser()
-        config_path = Path('.dvc/config')
-        
-        if not config_path.exists():
-            raise ValueError("DVC config file not found at .dvc/config")
-            
-        config.read(config_path)
-        
-        if 'remote "origin"' not in config:
-            raise ValueError("DVC remote 'origin' not configured in .dvc/config")
-            
-        remote_config = config['remote "origin"']
-        self.dvc_user = remote_config.get('user')
-        self.dvc_password = remote_config.get('password')
-        
-        if not self.dvc_user or not self.dvc_password:
-            raise ValueError("DVC credentials not found in .dvc/config")
-    
-    def add_and_push(self, filepath: str, cwd: Optional[str] = None, commit: bool = True, message: Optional[str] = None) -> None:
+        """Set hardcoded DVC credentials for environment variables."""
+        # These are used to set environment variables during command execution
+        self.dvc_user = "fbarulli"
+        self.dvc_password = "dhp_PF4M7kHEXdFW8WGDGXrXnRuP"
+
+    def add_and_push(self, filepath: str, commit: bool = False, message: Optional[str] = None) -> None:
         """
-        Adds a file to DVC, pushes changes, and optionally commits to git
+        Adds a file to DVC and pushes changes.
         
-        :param filepath: Path to the file to add
+        :param filepath: Path to the file to add relative to cwd
         :type filepath: str
-        :param cwd: Working directory where DVC commands will be executed
-        :type cwd: Optional[str]
-        :param commit: Whether to commit changes to git
+        :param commit: Ignored since we're using DVC without git
         :type commit: bool
-        :param message: Commit message if committing to git
+        :param message: Ignored since we're using DVC without git
         :type message: Optional[str]
         """
         env = os.environ.copy()
+        # DVC should pick up credentials from the config file now
+        # env['DVC_USERNAME'] = self.dvc_user
+        # env['DVC_PASSWORD'] = self.dvc_password
         
-        # No need for setup_authentication as credentials are in .dvc/config
+        # Verify DVC remote is set up correctly
+        try:
+            result = subprocess.run(
+                ["dvc", "remote", "list"],
+                env=env,
+                cwd=self.cwd,
+                capture_output=True,
+                text=True,
+                check=True,
+                timeout=30
+            )
+            self.log.info(f"DVC remotes: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            self.log.error(f"DVC remote list error: {e.stderr}")
+            raise
         
-        # Add and push to DVC
-        subprocess.run(["dvc", "add", filepath], env=env, cwd=cwd, check=True)
-        subprocess.run(["dvc", "push"], env=env, cwd=cwd, check=True)
+        # Add to DVC
+        try:
+            result = subprocess.run(
+                ["dvc", "add", filepath],
+                env=env,
+                cwd=self.cwd,
+                capture_output=True,
+                text=True,
+                check=True,
+                timeout=30
+            )
+            self.log.info(f"DVC add output: {result.stdout}")
+        except subprocess.CalledProcessError as e:
+            self.log.error(f"DVC add error: {e.stderr}")
+            raise
         
-        if commit:
-            if not message:
-                message = f"Update {filepath}"
-            
-            # Add DVC file to git and commit
-            dvc_file = f"{filepath}.dvc"
-            subprocess.run(["git", "add", dvc_file], env=env, cwd=cwd, check=True)
-            subprocess.run(["git", "commit", "-m", message, "--allow-empty"], env=env, cwd=cwd, check=True)
-            subprocess.run(["git", "push"], env=env, cwd=cwd, check=True)
+        # Push to DVC with retries
+        max_retries = 3
+        retry_delay = 5  # seconds
+        
+        for attempt in range(max_retries):
+            try:
+                result = subprocess.run(
+                    ["dvc", "push", "-v"],
+                    env=env,
+                    cwd=self.cwd,
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                    timeout=60
+                )
+                self.log.info(f"DVC push output: {result.stdout}")
+                break
+            except subprocess.CalledProcessError as e:
+                self.log.error(f"DVC push error (attempt {attempt + 1}): {e.stderr}")
+                if attempt == max_retries - 1:
+                    raise
+                time.sleep(retry_delay)
+            except subprocess.TimeoutExpired:
+                self.log.error(f"DVC push timeout (attempt {attempt + 1})")
+                if attempt == max_retries - 1:
+                    raise
+                time.sleep(retry_delay)

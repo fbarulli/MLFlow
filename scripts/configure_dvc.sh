@@ -31,7 +31,7 @@ cat > .dvc/config << EOF
     url = ${EXPECTED_URL}
     auth = basic
     user = fbarulli
-    password = 51787e96187f806133bd849bc8c772b9c47c11ea
+    password = 1de275ede522e8bd56e558a81ecd32a803b7ba64
 EOF
 
 # Set origin as the default remote
