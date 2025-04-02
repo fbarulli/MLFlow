@@ -1,5 +1,60 @@
 # Previous Errors and Fixes
 
+## Webserver Authentication Error (`AttributeError: 'NoneType' object has no attribute 'is_active'`)
+
+**Error Message:**
+```
+AttributeError: 'NoneType' object has no attribute 'is_active'
+  File ".../flask_login/login_manager.py", line 364, in _load_user
+    user = self._user_callback(user_id)
+  File ".../airflow/providers/fab/auth_manager/security_manager/override.py", line 1625, in load_user
+    if user.is_active:
+```
+
+**Origin:**
+This error appears in the Airflow webserver logs (`airflow-webserver.log` or console output) when accessing the UI after the database backend was switched (e.g., from SQLite to PostgreSQL).
+
+**Root Cause:**
+The user's browser session cookie contains an ID referencing a user from the *old* database. When the webserver, now connected to the *new* database (PostgreSQL), tries to load this user ID via `load_user`, it finds no matching user, resulting in `user` being `None`. The subsequent attempt to access `user.is_active` causes the `AttributeError`.
+
+**Solution:**
+1.  **Clear Browser Cookies:** The primary solution is to clear cookies for the Airflow webserver domain (e.g., `localhost`) in the browser. This removes the invalid session cookie.
+2.  **Ensure Clean Restart:** Make sure old Airflow processes are stopped before restarting. The `restart_airflow.sh` script attempts this with `pkill`, but may require manual intervention or `sudo` if permissions are insufficient.
+    ```bash
+    # Manually stop if needed (replace PIDs)
+    # kill <pid1> <pid2>
+    # OR potentially use sudo
+    # sudo pkill -f airflow
+    
+    # Then restart
+    bash scripts/restart_airflow.sh
+    ```
+3.  **Log In Again:** After clearing cookies and restarting, access the Airflow UI. You should be prompted to log in again, creating a new, valid session tied to the PostgreSQL database.
+
+## Stale DAG File Error
+
+**Error Message:**
+```
+TypeError: DVCHook.add_and_push() got an unexpected keyword argument 'cwd'
+```
+
+**Origin:**
+This error reappeared in the `version_data` task even after the code in `weather_dag.py` was corrected to remove the `cwd` argument.
+
+**Root Cause:**
+The Airflow scheduler was likely still using a cached or older version of the `weather_dag.py` file. Changes made to DAG files are not always picked up immediately by the scheduler, leading to tasks executing with outdated code.
+
+**Troubleshooting:**
+1. Verified the code in `dags/weather_dag.py` was correct using `read_file`.
+2. Confirmed the `cwd` argument was indeed removed from the `hook.add_and_push` call.
+
+**Solution:**
+Restarting the Airflow scheduler and webserver forces a reload of all DAG files, ensuring the latest code is used.
+```bash
+bash scripts/restart_airflow.sh
+```
+This is a common step required after modifying DAG definitions to ensure the scheduler recognizes the changes.
+
 ## DVCHook Argument Error
 
 **Error Message:**
@@ -39,44 +94,40 @@ subprocess.CalledProcessError: Command '['dvc', 'push', '-v']' returned non-zero
 ```
 
 **Origin:**
-The error occurs in the version_data task when attempting to push data to the DVC remote. Despite setting credentials via environment variables, the push fails with a 401 Unauthorized error.
+The error occurs in the `version_data` task when attempting to push data to the DVC remote. The `dvc push` command fails with a 401 Unauthorized error.
 
-**Root Cause:**
-The DVC configuration, including remote setup and credentials, performed in `setup_airflow.py` was not reliably accessible or persistent within the Airflow task execution environment. DVC relies on the `.dvc/config` file within the working directory, and setting environment variables alone wasn't sufficient.
+**Root Cause Analysis:**
+Attempts to configure DVC credentials using `dvc config` within the hook (`_setup_dvc`) did not reliably solve the authentication issue for `dvc push` in the Airflow task environment. It seems the most reliable way to authenticate `dvc push` in this context is via environment variables.
 
-**Fix:**
-Moved DVC initialization and configuration entirely into the `DVCHook`:
+**Fix (Simplified Authentication):**
+Further simplified the `DVCHook`:
 
-1. Removed DVC setup logic from `setup_airflow.py`.
-2. Added a `_setup_dvc` method to `DVCHook`:
-   ```python
-   def _setup_dvc(self) -> None:
-       """Initialize DVC and configure remote if not already set up."""
-       dvc_dir = self.cwd_path / ".dvc"
-       
-       if not dvc_dir.exists():
-           self.log.info(f"Initializing DVC in {self.cwd} without git...")
-           subprocess.run(["dvc", "init", "--no-scm"], cwd=self.cwd, check=True, ...)
-       
-       # Configure DVC remote using dvc config commands
-       try:
-           subprocess.run(["dvc", "remote", "add", "-d", "origin", ...], cwd=self.cwd, ...)
-           subprocess.run(["dvc", "remote", "modify", "origin", "--local", "auth", ...], cwd=self.cwd, ...)
-           # ... configure user and password ...
-       except subprocess.CalledProcessError as e:
-           if "already exists" in e.stderr:
-               self.log.warning("DVC remote 'origin' already configured.")
-           else:
-               raise
-   ```
-3. The `DVCHook` constructor now calls `_setup_dvc` to ensure the configuration exists in the correct working directory (`cwd`) before any DVC commands are run.
-4. Removed explicit credential passing via environment variables in `add_and_push`, as DVC now reads directly from the config file created by the hook.
+1.  **`_setup_dvc` Method:**
+    *   Only runs `dvc init --no-scm` if needed.
+    *   Ensures the remote URL is set using `dvc remote add --force -d origin ...`.
+    *   **Removed** all `dvc config` commands for setting `auth`, `user`, and `password`.
 
-This approach ensures that:
-- DVC is initialized and configured within the task's working directory.
-- Credentials are set directly in the DVC config file, which is the standard way DVC expects them.
-- Configuration is idempotent (handles cases where config already exists).
-- Eliminates reliance on environment variable inheritance for DVC credentials.
+2.  **`add_and_push` Method:**
+    *   **Relies solely on setting `DVC_USERNAME` and `DVC_PASSWORD` environment variables** for the `dvc push` subprocess call.
+    ```python
+       # Push to DVC with retries (using env with explicit credentials)
+       env_with_creds = os.environ.copy()
+       env_with_creds['DVC_USERNAME'] = self.dvc_user
+       env_with_creds['DVC_PASSWORD'] = self.dvc_password
+       # ... retry loop ...
+           result = subprocess.run(
+               ["dvc", "push", "-v"],
+               env=env_with_creds, # Use env with explicit credentials
+               cwd=self.cwd,
+               # ... rest of subprocess args ...
+           )
+       # ... success/retry logic ...
+    ```
+
+This approach:
+*   Avoids potential conflicts or inconsistencies from writing to `.dvc/config` within the hook.
+*   Uses the most direct method (environment variables) to authenticate the `dvc push` command, which appears necessary in the Airflow task environment.
+*   Still ensures DVC is initialized and the remote URL is configured.
 
 ## Task Signal Handling Improvement
 

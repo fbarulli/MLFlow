@@ -1,5 +1,5 @@
 [core]
-    no_scm = True
+    autostage = false
     remote = origin
 ['remote "origin"']
     url = https://dagshub.com/fbarulli/MLFlow.dvc
