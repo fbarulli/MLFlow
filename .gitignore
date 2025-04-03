@@ -5,3 +5,4 @@ data_storage/raw/*
 data_storage/raw/weather_*.csv
 /data_storage
 logs/
+.dvc/tmp/
