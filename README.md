@@ -1,72 +1,89 @@
-# MLFlow Project
+# MLFlow Project with Airflow
 
-This project combines MLflow, Airflow, and DVC for an end-to-end ML workflow.
+This project uses Docker to run Apache Airflow and MLflow services in a reproducible environment.
 
-## Overview
+## Prerequisites
 
-This project includes the following components:
-- **Data Collection**: Scripts to fetch weather data from an API and store it in a CSV file.
-- **Data Class**: Pydantic models to structure the weather data.
-- **Logging**: Custom logging setup to log events to CSV files.
-- **Airflow**: Orchestrates the workflow using DAGs.
-- **DVC**: Manages data versioning.
+- Docker
+- Docker Compose
 
-## Setup
+## Quick Start
 
-1. Clone this repository
-2. Run the setup script to create the environment and initialize Airflow:
-
+1. Start all services:
 ```bash
-chmod +x setup_airflow.sh
+chmod +x scripts/manage_docker.sh
+./scripts/manage_docker.sh start
 ```
 
-## Running Airflow
+2. Access the services:
+- Airflow UI: http://localhost:8080
+  - Username: admin
+  - Password: admin
+- MLflow UI: http://localhost:5000
 
-Start Airflow services (scheduler and webserver):
+## Project Structure
 
-```bash
-conda activate mlflow
-scripts/orchestrate.sh
+```
+.
+├── dags/                  # Airflow DAG files
+├── data_storage/          # Data storage directory
+├── logs/                  # Airflow logs
+├── mlruns/               # MLflow experiment tracking
+├── plugins/              # Airflow plugins
+├── Dockerfile.airflow    # Custom Airflow image with MLflow
+├── docker-compose.yml    # Service orchestration
+└── scripts/
+    └── manage_docker.sh  # Service management script
 ```
 
-Access the Airflow UI at http://localhost:8080
-- Username: admin
-- Password: admin
-
-Stop Airflow services:
+## Management Commands
 
 ```bash
-pkill -f "airflow scheduler" && pkill -f "airflow webserver"
+./scripts/manage_docker.sh <command>
 ```
 
-## Scripts Overview
+Available commands:
+- `start`: Start all services
+- `stop`: Stop all services
+- `restart`: Restart all services
+- `logs`: Show service logs
+- `clean`: Stop services and remove volumes
+- `ps`: Show service status
 
-- **setup_airflow.sh**: Sets up Airflow by configuring the environment and initializing the database.
-- **orchestrate.sh**: Orchestrates the setup process by running various setup scripts in sequence.
-- **shutdown_services.sh**: Shuts down any lingering Airflow and MLFlow services.
-- **configure_git.sh**: Configures Git with user details if not already set.
-- **configure_dvc.sh**: Configures DVC remote storage.
-- **build_docker.sh**: Builds the Docker container for the project.
-- **setup_evidently.sh**: Installs the Evidently package.
-- **start_mlflow.sh**: Starts the MLFlow server.
-- **start_webserver.sh**: Starts the Airflow webserver.
-- **start_scheduler.sh**: Starts the Airflow scheduler.
+## Environment Variables
 
-## DVC Configuration
+You can customize the setup using environment variables:
+- `AIRFLOW_SECRET_KEY`: Custom secret key for Airflow (auto-generated if not set)
 
-Set up DVC remote:
+## Rebuilding Images
 
+To rebuild the images after making changes:
 ```bash
-dvc remote add -d myremote https://dagshub.com/fbarulli/MLFlow.dvc
-dvc remote modify myremote --local auth basic
-dvc remote modify myremote --local user fbarulli
-dvc remote modify myremote --local password dhp_yourDagsHubTokenHere
+./scripts/manage_docker.sh stop
+docker compose build --no-cache
+./scripts/manage_docker.sh start
 ```
+
+## Service Dependencies
+
+The setup includes:
+1. PostgreSQL (Airflow metadata database)
+2. Airflow Webserver
+3. Airflow Scheduler
+4. MLflow Server
 
 ## Troubleshooting
 
-If you encounter issues with Airflow:
+1. If you see authentication errors:
+   - Stop all services: `./scripts/manage_docker.sh stop`
+   - Clean volumes: `./scripts/manage_docker.sh clean`
+   - Start fresh: `./scripts/manage_docker.sh start`
 
-1. Check the logs in `logs/webserver.log` and `logs/scheduler.log`
-2. Run `./check_airflow_config.sh` to diagnose configuration issues
-3. Try restarting with `./stop_airflow.sh` followed by `./run_airflow.sh`
+2. To view service logs:
+   ```bash
+   ./scripts/manage_docker.sh logs
+   ```
+
+3. To check service status:
+   ```bash
+   ./scripts/manage_docker.sh ps

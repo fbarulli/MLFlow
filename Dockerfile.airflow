@@ -1,0 +1,45 @@
+# Use the official Airflow image as base
+FROM apache/airflow:2.8.1
+
+USER root
+
+# Install system dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+USER airflow
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    mlflow \
+    psycopg2-binary \
+    apache-airflow-providers-docker \
+    evidently \
+    dvc \
+    requests \
+    pandas \
+    scikit-learn
+
+# Copy requirements if you have additional dependencies
+COPY --chown=airflow:root requirements.txt /opt/airflow/requirements.txt
+RUN pip install --no-cache-dir -r /opt/airflow/requirements.txt
+
+# Set environment variables
+ENV AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True \
+    AIRFLOW__CORE__LOAD_EXAMPLES=False \
+    PYTHONPATH=/opt/airflow
+
+# Create required directories
+USER root
+RUN mkdir -p /opt/airflow/data_storage && \
+    chown -R airflow:root /opt/airflow/data_storage
+
+USER airflow
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=30s --retries=3 \
+    CMD airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"

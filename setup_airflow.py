@@ -7,22 +7,24 @@ import subprocess
 from pathlib import Path
 import warnings
 
-# --- Configuration ---
-# These should match the credentials used/created in scripts/setup_postgres.sh
-POSTGRES_DB = "airflow"
-POSTGRES_USER = "airflow"
-POSTGRES_PASSWORD = "airflow"
-POSTGRES_HOST = "localhost" # Or the appropriate hostname/IP if not local
+# Import centralized configuration
+import config
 
-AIRFLOW_ADMIN_USER = "admin"
-AIRFLOW_ADMIN_PASSWORD = "admin" # Change this for better security if needed
-AIRFLOW_ADMIN_EMAIL = "admin@example.com"
-WEBSERVER_PORT = "8080" # Default Airflow port
+# These configurations are now imported from config.py
+POSTGRES_DB = config.POSTGRES_DB
+POSTGRES_USER = config.POSTGRES_USER
+POSTGRES_PASSWORD = config.POSTGRES_PASSWORD
+POSTGRES_HOST = config.POSTGRES_HOST
+POSTGRES_PORT = config.POSTGRES_PORT
+
+AIRFLOW_ADMIN_USER = config.ADMIN_USER
+AIRFLOW_ADMIN_PASSWORD = config.ADMIN_PASSWORD
+AIRFLOW_ADMIN_EMAIL = config.ADMIN_EMAIL
+WEBSERVER_PORT = str(config.WEBSERVER_PORT)
 
 # --- Script Logic ---
-
-# Determine Project Root (AIRFLOW_HOME) based on this script's location
-# Assumes this script is in the project root directory (e.g., ~/MLFlow)
+# Get Project Root from centralized config
+AIRFLOW_HOME_PATH = Path(config.get_project_root())
 AIRFLOW_HOME_PATH = Path(__file__).resolve().parent
 
 def run_command(command, check=True, capture_output=False, text=True, env=None, **kwargs):
