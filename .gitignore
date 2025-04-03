@@ -9,3 +9,4 @@ logs/
 .dvc/tmp/*
 __pycache__/
 *.pyc
+logs/
