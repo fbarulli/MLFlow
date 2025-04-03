@@ -15,5 +15,5 @@ requests>=2.0.0
 matplotlib>=3.0.0
 plotly>=5.0.0
 
-# Airflow Providers
-apache-airflow-providers-docker>=4.0.0
+# Airflow Providers (Compatible with Airflow 2.8.1 / Python 3.8)
+apache-airflow-providers-docker==3.14.0
