@@ -1,0 +1,48 @@
+[2025-04-03T09:41:03.909+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-03T09:41:03.942+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_collection.version_data scheduled__2025-04-03T09:40:00+00:00 [queued]>
+[2025-04-03T09:41:03.956+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_collection.version_data scheduled__2025-04-03T09:40:00+00:00 [queued]>
+[2025-04-03T09:41:03.957+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-03T09:41:03.973+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): version_data> on 2025-04-03 09:40:00+00:00
+[2025-04-03T09:41:03.984+0000] {logging_mixin.py:190} WARNING - /home/ubuntu/miniconda/envs/mlflow/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=39142) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-03T09:41:03.986+0000] {standard_task_runner.py:72} INFO - Started process 39151 to run task
+[2025-04-03T09:41:03.984+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_data_collection', 'version_data', 'scheduled__2025-04-03T09:40:00+00:00', '--job-id', '367', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmpc3gkqd6m']
+[2025-04-03T09:41:03.988+0000] {standard_task_runner.py:105} INFO - Job 367: Subtask version_data
+[2025-04-03T09:41:04.063+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_data_collection.version_data scheduled__2025-04-03T09:40:00+00:00 [running]> on host ip-172-31-19-13.eu-west-1.compute.internal
+[2025-04-03T09:41:04.207+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_collection' AIRFLOW_CTX_TASK_ID='version_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T09:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-03T09:40:00+00:00'
+[2025-04-03T09:41:04.208+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-03T09:41:04.224+0000] {dvc_hook.py:26} INFO - DVC already initialized in /home/ubuntu/MLFlow
+[2025-04-03T09:41:04.943+0000] {dvc_hook.py:33} INFO - Ensured DVC remote 'origin' URL is set.
+[2025-04-03T09:41:08.231+0000] {dvc_hook.py:47} INFO - DVC remote credentials set successfully.
+[2025-04-03T09:41:10.107+0000] {dvc_hook.py:57} INFO - DVC add output: 
+To track the changes with git, run:
+
+	git add data_storage.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+[2025-04-03T09:41:10.107+0000] {dvc_hook.py:67} INFO - Attempt 1 to push...
+[2025-04-03T09:41:14.848+0000] {dvc_hook.py:75} INFO - DVC push output: 2025-04-03 09:41:10,364 DEBUG: v3.59.1 (pip), CPython 3.12.9 on Linux-5.15.0-1080-aws-x86_64-with-glibc2.31
+2025-04-03 09:41:10,364 DEBUG: command: /home/ubuntu/miniconda/envs/mlflow/bin/dvc push -v --remote origin
+2025-04-03 09:41:11,343 DEBUG: Preparing to transfer data from '/home/ubuntu/MLFlow/.dvc/cache/files/md5' to 'https://dagshub.com/fbarulli/MLFlow.dvc/files/md5'
+2025-04-03 09:41:11,344 DEBUG: Preparing to collect status from 'https://dagshub.com/fbarulli/MLFlow.dvc/files/md5'
+2025-04-03 09:41:11,344 DEBUG: Collecting status from 'https://dagshub.com/fbarulli/MLFlow.dvc/files/md5'
+2025-04-03 09:41:11,352 DEBUG: Querying 60 oids via object_exists
+2025-04-03 09:41:12,872 DEBUG: Querying 1 oids via object_exists
+2025-04-03 09:41:13,125 DEBUG: Querying 2 oids via object_exists
+2025-04-03 09:41:13,386 DEBUG: Preparing to collect status from '/home/ubuntu/MLFlow/.dvc/cache/files/md5'
+2025-04-03 09:41:13,386 DEBUG: Collecting status from '/home/ubuntu/MLFlow/.dvc/cache/files/md5'
+2025-04-03 09:41:13,866 DEBUG: transfer dir: md5: ac0ce5c1d9a984329f881cafc5f121ca.dir with 1 files
+2025-04-03 09:41:14,513 DEBUG: Indexing pushed dir 'md5: ac0ce5c1d9a984329f881cafc5f121ca.dir' with '1' nested files
+2 files pushed
+2025-04-03 09:41:14,552 DEBUG: Analytics is enabled.
+2025-04-03 09:41:14,627 DEBUG: Trying to spawn ['daemon', 'analytics', '/tmp/tmpx22s82i5', '-v']
+2025-04-03 09:41:14,638 DEBUG: Spawned ['daemon', 'analytics', '/tmp/tmpx22s82i5', '-v'] with pid 39239
+
+[2025-04-03T09:41:14.848+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-03T09:41:14.868+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-03T09:41:14.869+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=weather_data_collection, task_id=version_data, run_id=scheduled__2025-04-03T09:40:00+00:00, execution_date=20250403T094000, start_date=20250403T094103, end_date=20250403T094114
+[2025-04-03T09:41:14.952+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-03T09:41:14.980+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T09:41:14.990+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
