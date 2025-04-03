@@ -1,32 +1,0 @@
-[2025-04-03T08:42:36.358+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
-[2025-04-03T08:42:36.391+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-04-03T08:41:00+00:00 [queued]>
-[2025-04-03T08:42:36.407+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-04-03T08:41:00+00:00 [queued]>
-[2025-04-03T08:42:36.408+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
-[2025-04-03T08:42:36.433+0000] {taskinstance.py:2890} INFO - Executing <Task(DockerOperator): collect_weather_data> on 2025-04-03 08:41:00+00:00
-[2025-04-03T08:42:36.452+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_data_collection', 'collect_weather_data', 'scheduled__2025-04-03T08:41:00+00:00', '--job-id', '187', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmpdjmftiek']
-[2025-04-03T08:42:36.455+0000] {standard_task_runner.py:105} INFO - Job 187: Subtask collect_weather_data
-[2025-04-03T08:42:36.456+0000] {logging_mixin.py:190} WARNING - /home/ubuntu/miniconda/envs/mlflow/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=13824) is multi-threaded, use of fork() may lead to deadlocks in the child.
-[2025-04-03T08:42:36.457+0000] {standard_task_runner.py:72} INFO - Started process 13841 to run task
-[2025-04-03T08:42:36.532+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_data_collection.collect_weather_data scheduled__2025-04-03T08:41:00+00:00 [running]> on host ip-172-31-19-13.eu-west-1.compute.internal
-[2025-04-03T08:42:36.656+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_collection' AIRFLOW_CTX_TASK_ID='collect_weather_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T08:41:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-03T08:41:00+00:00'
-[2025-04-03T08:42:36.657+0000] {taskinstance.py:732} INFO - ::endgroup::
-[2025-04-03T08:42:36.721+0000] {docker.py:353} INFO - Starting docker container from image weather-collector:light
-[2025-04-03T08:42:38.364+0000] {docker.py:73} INFO -   0%|          | 0/5 [00:00<?, ?it/s]
-[2025-04-03T08:42:38.533+0000] {docker.py:73} INFO -  60%|██████    | 3/5 [00:00<00:00, 17.74it/s]
-[2025-04-03T08:42:38.720+0000] {docker.py:73} INFO - 100%|██████████| 5/5 [00:00<00:00, 13.44it/s]
-[2025-04-03T08:42:38.810+0000] {docker.py:73} INFO - 100%|██████████| 5/5 [00:00<00:00, 11.20it/s]
-[2025-04-03T08:42:38.812+0000] {docker.py:73} INFO -   0%|          | 0/5 [00:00<?, ?it/s]
-[2025-04-03T08:42:38.813+0000] {docker.py:73} INFO - 100%|██████████| 5/5 [00:00<00:00, 3960.63it/s]
-[2025-04-03T08:42:38.837+0000] {docker.py:73} INFO -        city country  ...  weather_description             datetime
-[2025-04-03T08:42:38.837+0000] {docker.py:73} INFO - 0     Paris      FR  ...            clear sky  2025-04-03T08:42:38
-[2025-04-03T08:42:38.837+0000] {docker.py:73} INFO - 1    London      GB  ...            clear sky  2025-04-03T08:42:38
-[2025-04-03T08:42:38.838+0000] {docker.py:73} INFO - 2  New York      US  ...                 mist  2025-04-03T08:42:38
-[2025-04-03T08:42:38.838+0000] {docker.py:73} INFO - 3    Berlin      DE  ...            clear sky  2025-04-03T08:42:38
-[2025-04-03T08:42:38.838+0000] {docker.py:73} INFO - 4     Tokyo      JP  ...           light rain  2025-04-03T08:42:38
-[2025-04-03T08:42:38.839+0000] {docker.py:73} INFO - 
-[2025-04-03T08:42:38.839+0000] {docker.py:73} INFO - [5 rows x 7 columns]
-[2025-04-03T08:42:39.234+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
-[2025-04-03T08:42:39.234+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=weather_data_collection, task_id=collect_weather_data, run_id=scheduled__2025-04-03T08:41:00+00:00, execution_date=20250403T084100, start_date=20250403T084236, end_date=20250403T084239
-[2025-04-03T08:42:39.326+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
-[2025-04-03T08:42:39.382+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
-[2025-04-03T08:42:39.385+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,85 +1,35 @@
-[2025-04-03T08:36:16.297+0000] {processor.py:186} INFO - Started process (PID=11899) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:36:16.300+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:36:16.306+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:36:16.303+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:36:16.324+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:36:16.355+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.078 seconds
-[2025-04-03T08:36:47.423+0000] {processor.py:186} INFO - Started process (PID=12198) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:36:47.424+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:36:47.427+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:36:47.426+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:36:47.437+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:36:47.476+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.062 seconds
-[2025-04-03T08:37:18.007+0000] {processor.py:186} INFO - Started process (PID=12651) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:37:18.009+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:37:18.012+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:37:18.012+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:37:18.015+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:37:18.042+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.044 seconds
-[2025-04-03T08:37:48.404+0000] {processor.py:186} INFO - Started process (PID=12870) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:37:48.405+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:37:48.407+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:37:48.407+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:37:48.411+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:37:48.437+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.041 seconds
-[2025-04-03T08:38:18.777+0000] {processor.py:186} INFO - Started process (PID=13005) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:38:18.780+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:38:18.782+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:38:18.782+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:38:18.785+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:38:18.805+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.035 seconds
-[2025-04-03T08:38:49.151+0000] {processor.py:186} INFO - Started process (PID=13113) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:38:49.153+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:38:49.155+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:38:49.155+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:38:49.159+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:38:49.182+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.039 seconds
-[2025-04-03T08:39:19.510+0000] {processor.py:186} INFO - Started process (PID=13302) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:39:19.514+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:39:19.517+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:39:19.517+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:39:19.521+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:39:19.546+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.043 seconds
-[2025-04-03T08:39:49.910+0000] {processor.py:186} INFO - Started process (PID=13334) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:39:49.914+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:39:49.916+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:39:49.916+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:39:49.920+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:39:49.943+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.041 seconds
-[2025-04-03T08:40:20.280+0000] {processor.py:186} INFO - Started process (PID=13408) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:40:20.281+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:40:20.284+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:40:20.284+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:40:20.289+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:40:20.318+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.046 seconds
-[2025-04-03T08:40:50.831+0000] {processor.py:186} INFO - Started process (PID=13441) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:40:50.836+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:40:50.839+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:40:50.839+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:40:50.846+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:40:50.873+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.053 seconds
-[2025-04-03T08:41:21.422+0000] {processor.py:186} INFO - Started process (PID=13542) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:41:21.423+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:41:21.427+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:41:21.426+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:41:21.433+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:41:21.464+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.052 seconds
-[2025-04-03T08:41:51.284+0000] {processor.py:186} INFO - Started process (PID=13579) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:41:51.286+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:41:51.289+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:41:51.288+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:41:51.296+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:41:51.324+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.050 seconds
-[2025-04-03T08:42:21.738+0000] {processor.py:186} INFO - Started process (PID=13689) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:42:21.739+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:42:21.742+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:42:21.741+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:42:21.745+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:42:21.768+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.039 seconds
-[2025-04-03T08:42:52.224+0000] {processor.py:186} INFO - Started process (PID=14093) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:42:52.226+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:42:52.228+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:42:52.228+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:42:52.231+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:42:52.251+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.035 seconds
-[2025-04-03T08:43:22.690+0000] {processor.py:186} INFO - Started process (PID=14413) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:43:22.691+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:43:22.693+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:43:22.693+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:43:22.696+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:43:22.716+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.035 seconds
-[2025-04-03T08:43:53.148+0000] {processor.py:186} INFO - Started process (PID=14509) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:43:53.149+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:43:53.155+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:43:53.151+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:43:53.162+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:43:53.183+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.044 seconds
-[2025-04-03T08:44:23.606+0000] {processor.py:186} INFO - Started process (PID=14832) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:44:23.608+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
-[2025-04-03T08:44:23.610+0000] {logging_mixin.py:190} INFO - [2025-04-03T08:44:23.610+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:44:23.614+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
-[2025-04-03T08:44:23.639+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.040 seconds
+[2025-04-03T09:07:13.196+0000] {processor.py:186} INFO - Started process (PID=25648) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:07:13.204+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
+[2025-04-03T09:07:13.208+0000] {logging_mixin.py:190} INFO - [2025-04-03T09:07:13.208+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:07:13.214+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:07:13.256+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.075 seconds
+[2025-04-03T09:07:43.354+0000] {processor.py:186} INFO - Started process (PID=26030) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:07:43.358+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
+[2025-04-03T09:07:43.364+0000] {logging_mixin.py:190} INFO - [2025-04-03T09:07:43.363+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:07:43.369+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:07:43.418+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.078 seconds
+[2025-04-03T09:08:13.894+0000] {processor.py:186} INFO - Started process (PID=26354) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:08:13.895+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
+[2025-04-03T09:08:13.898+0000] {logging_mixin.py:190} INFO - [2025-04-03T09:08:13.898+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:08:13.901+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:08:13.929+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.043 seconds
+[2025-04-03T09:08:44.679+0000] {processor.py:186} INFO - Started process (PID=26456) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:08:44.680+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
+[2025-04-03T09:08:44.683+0000] {logging_mixin.py:190} INFO - [2025-04-03T09:08:44.682+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:08:44.686+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:08:44.707+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.036 seconds
+[2025-04-03T09:09:15.072+0000] {processor.py:186} INFO - Started process (PID=26766) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:09:15.080+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
+[2025-04-03T09:09:15.083+0000] {logging_mixin.py:190} INFO - [2025-04-03T09:09:15.083+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:09:15.086+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:09:15.125+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.070 seconds
+[2025-04-03T09:09:45.584+0000] {processor.py:186} INFO - Started process (PID=26860) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:09:45.585+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
+[2025-04-03T09:09:45.588+0000] {logging_mixin.py:190} INFO - [2025-04-03T09:09:45.587+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:09:45.591+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:09:45.618+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.044 seconds
+[2025-04-03T09:10:15.902+0000] {processor.py:186} INFO - Started process (PID=27164) to work on /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:10:15.905+0000] {processor.py:914} INFO - Processing file /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py for tasks to queue
+[2025-04-03T09:10:15.907+0000] {logging_mixin.py:190} INFO - [2025-04-03T09:10:15.907+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:10:15.910+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py
+[2025-04-03T09:10:15.935+0000] {processor.py:208} INFO - Processing /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py took 0.041 seconds
