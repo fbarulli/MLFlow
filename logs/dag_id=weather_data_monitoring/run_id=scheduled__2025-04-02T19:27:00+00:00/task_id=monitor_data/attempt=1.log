@@ -12,3 +12,15 @@
 [2025-04-02T19:28:00.953+0000] {taskinstance.py:732} INFO - ::endgroup::
 [2025-04-02T19:28:00.978+0000] {logging_mixin.py:190} INFO - Starting monitoring...
 [2025-04-02T19:28:01.979+0000] {logging_mixin.py:190} INFO - Monitoring... 1/60 seconds
+[2025-04-02T19:28:11.982+0000] {logging_mixin.py:190} INFO - Monitoring... 11/60 seconds
+[2025-04-02T19:28:21.983+0000] {logging_mixin.py:190} INFO - Monitoring... 21/60 seconds
+[2025-04-02T19:28:31.986+0000] {logging_mixin.py:190} INFO - Monitoring... 31/60 seconds
+[2025-04-02T19:28:41.988+0000] {logging_mixin.py:190} INFO - Monitoring... 41/60 seconds
+[2025-04-02T19:28:51.990+0000] {logging_mixin.py:190} INFO - Monitoring... 51/60 seconds
+[2025-04-02T19:29:00.992+0000] {logging_mixin.py:190} INFO - Monitoring complete
+[2025-04-02T19:29:00.992+0000] {python.py:240} INFO - Done. Returned value was: Monitoring successful
+[2025-04-02T19:29:01.078+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-02T19:29:01.079+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=weather_data_monitoring, task_id=monitor_data, run_id=scheduled__2025-04-02T19:27:00+00:00, execution_date=20250402T192700, start_date=20250402T192800, end_date=20250402T192901
+[2025-04-02T19:29:01.228+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-02T19:29:01.273+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T19:29:01.276+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -6346,3 +6346,220 @@ File Path                                                  PID    Runtime      #
 /home/ubuntu/MLFlow/dags/weather_dag.py                                             1           0  0.20s           2025-04-02T19:27:29                      12
 /home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.16s           2025-04-02T19:27:35                       3
 ================================================================================
+[2025-04-02T19:28:28.383+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                             1           0  0.44s           2025-04-02T19:28:00                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.37s           2025-04-02T19:28:00                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.15s           2025-04-02T19:28:06                       3
+================================================================================
+[2025-04-02T19:28:58.846+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.24s           2025-04-02T19:28:30                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                             1           0  0.22s           2025-04-02T19:28:30                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.08s           2025-04-02T19:28:36                       3
+================================================================================
+[2025-04-02T19:29:29.102+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.48s           2025-04-02T19:29:01                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                                             1           0  0.47s           2025-04-02T19:29:01                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.06s           2025-04-02T19:29:07                       3
+================================================================================
+[2025-04-02T19:29:59.552+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                                             1           0  0.22s           2025-04-02T19:29:32                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.22s           2025-04-02T19:29:32                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.07s           2025-04-02T19:29:37                       3
+================================================================================
+[2025-04-03T08:36:16.092+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-04-03T08:36:16.096+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-04-03T08:36:16.097+0000] {manager.py:485} INFO - Checking for new files in /home/ubuntu/MLFlow/dags every 300 seconds
+[2025-04-03T08:36:16.098+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-04-03T08:36:16.109+0000] {manager.py:824} INFO - There are 3 files in /home/ubuntu/MLFlow/dags
+[2025-04-03T08:36:16.585+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.22s           2025-04-03T08:36:16                       3
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py            11913  0.07s             0           0                                                            0
+/home/ubuntu/MLFlow/dags/weather_dag.py                    11906  0.14s             0           0                                                            0
+================================================================================
+[2025-04-03T08:36:47.406+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.78s           2025-04-03T08:36:17                      12
+/home/ubuntu/MLFlow/dags/weather_dag.py                    12200  0.01s             1           0  0.76s           2025-04-03T08:36:17                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  12198  0.02s             0           0  0.22s           2025-04-03T08:36:16                       3
+================================================================================
+[2025-04-03T08:37:18.005+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    12654  0.01s             1           0  0.39s           2025-04-03T08:36:47                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.39s           2025-04-03T08:36:47                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  12651  0.02s             0           0  0.14s           2025-04-03T08:36:47                       3
+================================================================================
+[2025-04-03T08:37:48.402+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    12873  0.01s             1           0  0.21s           2025-04-03T08:37:18                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.19s           2025-04-03T08:37:18                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  12870  0.01s             0           0  0.08s           2025-04-03T08:37:18                       3
+================================================================================
+[2025-04-03T08:38:18.775+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13008  0.01s             1           0  0.19s           2025-04-03T08:37:48                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.16s           2025-04-03T08:37:48                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  13005  0.01s             0           0  0.07s           2025-04-03T08:37:48                       3
+================================================================================
+[2025-04-03T08:38:49.145+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13116  0.01s             1           0  0.19s           2025-04-03T08:38:18                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.17s           2025-04-03T08:38:18                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  13113  0.01s             0           0  0.06s           2025-04-03T08:38:18                       3
+================================================================================
+[2025-04-03T08:39:19.509+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13305  0.01s             1           0  0.18s           2025-04-03T08:38:49                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.16s           2025-04-03T08:38:49                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  13302  0.02s             0           0  0.07s           2025-04-03T08:38:49                       3
+================================================================================
+[2025-04-03T08:39:49.909+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13337  0.01s             1           0  0.20s           2025-04-03T08:39:19                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.17s           2025-04-03T08:39:19                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  13334  0.02s             0           0  0.08s           2025-04-03T08:39:19                       3
+================================================================================
+[2025-04-03T08:40:20.278+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13411  0.01s             1           0  0.19s           2025-04-03T08:39:50                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.17s           2025-04-03T08:39:50                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  13408  0.01s             0           0  0.07s           2025-04-03T08:39:49                       3
+================================================================================
+[2025-04-03T08:40:50.829+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13444  0.01s             1           0  0.34s           2025-04-03T08:40:20                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.34s           2025-04-03T08:40:20                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  13441  0.02s             0           0  0.08s           2025-04-03T08:40:20                       3
+================================================================================
+[2025-04-03T08:41:16.345+0000] {manager.py:821} INFO - Searching for files in /home/ubuntu/MLFlow/dags
+[2025-04-03T08:41:16.349+0000] {manager.py:824} INFO - There are 3 files in /home/ubuntu/MLFlow/dags
+[2025-04-03T08:41:21.420+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13545  0.01s             1           0  0.37s           2025-04-03T08:40:51                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py                                     1           0  0.35s           2025-04-03T08:40:51                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py  13542  0.02s             0           0  0.09s           2025-04-03T08:40:50                       3
+================================================================================
+[2025-04-03T08:41:52.296+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13585  0.02s             1           0  0.39s           2025-04-03T08:41:21                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py            13588  0.01s             1           0  0.37s           2025-04-03T08:41:21                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.09s           2025-04-03T08:41:51                       3
+================================================================================
+[2025-04-03T08:42:22.761+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    13696  0.02s             1           0  0.25s           2025-04-03T08:41:52                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py            13699  0.01s             1           0  0.24s           2025-04-03T08:41:52                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.07s           2025-04-03T08:42:21                       3
+================================================================================
+[2025-04-03T08:42:53.253+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    14099  0.02s             1           0  0.29s           2025-04-03T08:42:23                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py            14102  0.01s             1           0  0.24s           2025-04-03T08:42:22                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.06s           2025-04-03T08:42:52                       3
+================================================================================
+[2025-04-03T08:43:23.710+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    14422  0.02s             1           0  0.24s           2025-04-03T08:42:53                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py            14425  0.01s             1           0  0.20s           2025-04-03T08:42:53                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.06s           2025-04-03T08:43:22                       3
+================================================================================
+[2025-04-03T08:43:54.168+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    14515  0.02s             1           0  0.25s           2025-04-03T08:43:23                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py            14518  0.01s             1           0  0.22s           2025-04-03T08:43:23                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.07s           2025-04-03T08:43:53                       3
+================================================================================
+[2025-04-03T08:44:24.627+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/home/ubuntu/MLFlow/dags/weather_dag.py                    14842  0.02s             1           0  0.24s           2025-04-03T08:43:54                      12
+/home/ubuntu/MLFlow/dags/weather_monitor_dag.py            14845  0.01s             1           0  0.21s           2025-04-03T08:43:54                      12
+/home/ubuntu/MLFlow/dags/airflow_custom_hooks/dvc_hook.py                           0           0  0.07s           2025-04-03T08:44:23                       3
+================================================================================
