@@ -7,3 +7,5 @@ data_storage/raw/weather_*.csv
 logs/
 .dvc/tmp/
 .dvc/tmp/*
+__pycache__/
+*.pyc
