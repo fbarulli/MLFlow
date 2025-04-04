@@ -38,10 +38,10 @@ USER root
 RUN mkdir -p /opt/airflow/data_storage && \
     chown -R airflow:root /opt/airflow/data_storage
 
-# Install custom hooks package properly as a Python package
-COPY --chown=airflow:root dags/airflow_custom_hooks /opt/airflow/dags/airflow_custom_hooks/
-COPY --chown=airflow:root dags/setup.py /opt/airflow/dags/
-RUN cd /opt/airflow/dags && pip install -e .
+# Install MLFlow custom hooks plugin
+COPY --chown=airflow:root plugins/mlflow_custom_hooks /opt/airflow/plugins/mlflow_custom_hooks/
+COPY --chown=airflow:root plugins/setup.py /opt/airflow/plugins/
+RUN cd /opt/airflow/plugins && pip install -e .
 
 USER airflow
 

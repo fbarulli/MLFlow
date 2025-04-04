@@ -80,20 +80,14 @@ services:
   airflow-init:
     <<: *airflow-common
     entrypoint: /bin/bash
-    command:
-      - -c
-      - |
-        mkdir -p /opt/airflow/{logs,dags,plugins,data_storage,mlruns}
-        airflow db init
-        airflow users create \
-          --username admin \
-          --firstname admin \
-          --lastname admin \
-          --role Admin \
-          --email admin@example.com \
-          --password admin
-    environment:
-      <<: *airflow-common-env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./data_storage:/opt/airflow/data_storage
+      - ./mlruns:/opt/airflow/mlruns
+      - ./scripts/init-airflow.sh:/opt/airflow/init-airflow.sh
+    command: /opt/airflow/init-airflow.sh
     depends_on:
       <<: *airflow-common-depends-on
 
