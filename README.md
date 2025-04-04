@@ -6,10 +6,36 @@ This project uses Docker to run Apache Airflow and MLflow services in a reproduc
 
 - Docker
 - Docker Compose
+- sudo privileges (for setting up directory permissions)
+
+## Directory Setup
+
+Before starting the services, you need to set up the required directories with correct permissions:
+
+```bash
+# Make the setup script executable
+chmod +x scripts/setup_directories.sh
+
+# Run the setup script (requires sudo for permission changes)
+./scripts/setup_directories.sh
+```
+
+This script creates and configures the following directories with appropriate permissions:
+- `dags/`: For Airflow DAG files
+- `logs/`: For Airflow logs
+- `plugins/`: For Airflow plugins
+- `data_storage/`: For storing collected data
+- `mlruns/`: For MLflow tracking
 
 ## Quick Start
 
-1. Start all services:
+1. Set up directories (first time only):
+```bash
+chmod +x scripts/setup_directories.sh
+./scripts/setup_directories.sh
+```
+
+2. Start all services:
 ```bash
 chmod +x scripts/manage_docker.sh
 ./scripts/manage_docker.sh start

@@ -84,7 +84,6 @@ services:
       - -c
       - |
         mkdir -p /opt/airflow/{logs,dags,plugins,data_storage,mlruns}
-        chown -R airflow:root /opt/airflow/{logs,dags,plugins,data_storage,mlruns}
         airflow db init
         airflow users create \
           --username admin \

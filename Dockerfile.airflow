@@ -33,10 +33,15 @@ ENV AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True \
     AIRFLOW__CORE__LOAD_EXAMPLES=False \
     PYTHONPATH=/opt/airflow
 
-# Create required directories
+# Create required directories and install custom hooks package
 USER root
 RUN mkdir -p /opt/airflow/data_storage && \
     chown -R airflow:root /opt/airflow/data_storage
+
+# Install custom hooks package properly as a Python package
+COPY --chown=airflow:root dags/airflow_custom_hooks /opt/airflow/dags/airflow_custom_hooks/
+COPY --chown=airflow:root dags/setup.py /opt/airflow/dags/
+RUN cd /opt/airflow/dags && pip install -e .
 
 USER airflow
 
