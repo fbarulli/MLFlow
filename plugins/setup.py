@@ -1,3 +1,4 @@
+#plugins/setup.py
 from setuptools import setup, find_packages
 
 setup(
@@ -5,7 +6,7 @@ setup(
     version="0.1",
     packages=find_packages(),
     install_requires=[
-        'apache-airflow',
+        #'apache-airflow',
         'dvc',
     ],
     entry_points={

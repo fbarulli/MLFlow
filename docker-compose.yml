@@ -79,15 +79,9 @@ services:
 
   airflow-init:
     <<: *airflow-common
-    entrypoint: /bin/bash
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./plugins:/opt/airflow/plugins
-      - ./data_storage:/opt/airflow/data_storage
-      - ./mlruns:/opt/airflow/mlruns
-      - ./scripts/init-airflow.sh:/opt/airflow/init-airflow.sh
-    command: /opt/airflow/init-airflow.sh
+    entrypoint: /entrypoint
+    command: >
+      bash -c "airflow db init && airflow users create --role Admin --username admin --email admin@example.com --firstname admin --lastname admin --password admin ||"
     depends_on:
       <<: *airflow-common-depends-on
 
