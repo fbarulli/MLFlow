@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/462244724701110143
+creation_time: 1745946720662
+experiment_id: '462244724701110143'
+last_update_time: 1745946720662
+lifecycle_stage: active
+name: 2-MLflow_Wine_Nested

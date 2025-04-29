@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/908351812650782485/2e80afb94da941baaaf3234d329a4af4/artifacts
+deleted_time: 1745946702105
+end_time: 1745946601483
+entry_point_name: ''
+experiment_id: '908351812650782485'
+lifecycle_stage: deleted
+run_id: 2e80afb94da941baaaf3234d329a4af4
+run_name: Wine_Model_Comparison
+run_uuid: 2e80afb94da941baaaf3234d329a4af4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745946591303
+status: 3
+tags: []
+user_id: ubuntu

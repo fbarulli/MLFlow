@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1745946596088
+current_stage: None
+description: ''
+last_updated_timestamp: 1745946596088
+name: tracking-wine-logisticregression
+run_id: a4240b492b97421ea7bdd7d123bdbb2f
+run_link: ''
+source: mlflow-artifacts:/908351812650782485/a4240b492b97421ea7bdd7d123bdbb2f/artifacts/logisticregression_model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/908351812650782485/a4240b492b97421ea7bdd7d123bdbb2f/artifacts/logisticregression_model
+user_id: null
+version: 4

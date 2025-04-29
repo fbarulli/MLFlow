@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1745946720338
+current_stage: None
+description: ''
+last_updated_timestamp: 1745946720338
+name: tracking-wine-randomforest
+run_id: 116034f80d6a461b8bf5e29b20350a3f
+run_link: ''
+source: mlflow-artifacts:/205086602077169667/116034f80d6a461b8bf5e29b20350a3f/artifacts/randomforest_model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/205086602077169667/116034f80d6a461b8bf5e29b20350a3f/artifacts/randomforest_model
+user_id: null
+version: 4
