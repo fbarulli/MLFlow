@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1745937211733
+current_stage: None
+description: ''
+last_updated_timestamp: 1745937211733
+name: tracking-wine
+run_id: 044b07dee4cd4ad59cc194b31d592b07
+run_link: ''
+source: mlflow-artifacts:/340645493566817619/044b07dee4cd4ad59cc194b31d592b07/artifacts/iris_model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/340645493566817619/044b07dee4cd4ad59cc194b31d592b07/artifacts/iris_model
+user_id: null
+version: 1
