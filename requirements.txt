@@ -1,6 +1,8 @@
+
+# requirements.txt
 mlflow==2.16.2
 scikit-learn==1.5.2
 pandas==2.2.3
 matplotlib==3.9.2
 numpy==1.26.4
-kagglehub==0.3.3
+kagglehub==0.3.12

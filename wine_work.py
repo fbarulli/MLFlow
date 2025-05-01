@@ -1,3 +1,4 @@
+import kagglehub
 import mlflow
 import mlflow.sklearn
 from mlflow.models import infer_signature
@@ -19,8 +20,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
-logger.info("MLflow tracking URI set to http://127.0.0.1:5000")
+mlflow.set_tracking_uri("http://mlflow-server:5000")
+logger.info("MLflow tracking URI set to http://mlflow-server:5000")
 
 
 file_path = "wine_quality_classification.csv"

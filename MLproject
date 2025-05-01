@@ -1,8 +1,5 @@
 name: WineClassification
 
-python_env:
-  python: 3.12
-  requirements: requirements.txt
 
 entry_points:
   main:

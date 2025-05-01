@@ -1,4 +1,4 @@
-
+# docker-compose.yml
 services:
   mlflow-server:
     build:
@@ -12,17 +12,17 @@ services:
       - mlflow-network
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
 
   app:
     build:
       context: .
       dockerfile: Dockerfile.app
     environment:
-      - KAGGLE_USERNAME=your_kaggle_username
-      - KAGGLE_KEY=your_kaggle_api_key
+      - GIT_PYTHON_REFRESH=quiet
     depends_on:
       mlflow-server:
         condition: service_healthy
