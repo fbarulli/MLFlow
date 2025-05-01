@@ -183,7 +183,7 @@ try:
                     logger.error(f"Failed to log plots for {model_name}: {e}")
                     raise
 
-                
+                # Transition model to Staging
                 try:
                     client = mlflow.MlflowClient()
                     versions = client.get_registered_model(f"tracking-wine-{model_name.lower()}").latest_versions

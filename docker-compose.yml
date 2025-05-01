@@ -1,0 +1,36 @@
+
+services:
+  mlflow-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    networks:
+      - mlflow-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    environment:
+      - KAGGLE_USERNAME=your_kaggle_username
+      - KAGGLE_KEY=your_kaggle_api_key
+    depends_on:
+      mlflow-server:
+        condition: service_healthy
+    volumes:
+      - ./mlruns:/mlruns
+    networks:
+      - mlflow-network
+
+networks:
+  mlflow-network:
+    driver: bridge
