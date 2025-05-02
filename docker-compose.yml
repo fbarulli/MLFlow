@@ -28,6 +28,7 @@ services:
         condition: service_healthy
     volumes:
       - ./mlruns:/mlruns
+      - ./outputs:/app/outputs
     networks:
       - mlflow-network
 
