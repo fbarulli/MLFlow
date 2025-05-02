@@ -1,0 +1,50 @@
+
+services:
+  mlflow-server:
+    build:
+      context: .
+      dockerfile: mlflow/Dockerfile.server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    networks:
+      - mlflow-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+  app:
+    build:
+      context: .
+      dockerfile: mlflow/Dockerfile.app
+    environment:
+      - GIT_PYTHON_REFRESH=quiet
+    depends_on:
+      mlflow-server:
+        condition: service_healthy
+    volumes:
+      - ./mlruns:/mlruns
+      - ./outputs:/app/outputs
+    networks:
+      - mlflow-network
+  bentoml:
+    build:
+      context: .
+      dockerfile: Dockerfile.bentoml
+    ports:
+      - "3000:3000"
+    depends_on:
+      mlflow-server:
+        condition: service_healthy
+    volumes:
+      - ./mlruns:/mlruns
+      - ./outputs:/app/outputs
+      - ~/.bentoml:/root/.bentoml
+    networks:
+      - mlflow-network
+networks:
+  mlflow-network:
+    driver: bridge
