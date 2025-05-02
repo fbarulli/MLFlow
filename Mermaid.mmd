@@ -1,0 +1,62 @@
+flowchart TB
+    %% Developer Workstation
+    subgraph "Developer Workstation"
+        direction TB
+        wine["wine_work.py"]:::code
+        df["df.ipynb"]:::code
+        mlproj["MLproject"]:::code
+        runsh["run.sh"]:::code
+        req["requirements.txt"]:::code
+    end
+
+    %% Docker Compose Orchestrator
+    subgraph "Docker Compose Orchestrator"
+        direction TB
+        dockerCompose["docker-compose.yml"]:::orchestrator
+        %% Containers & Volumes
+        subgraph "Containers & Volumes"
+            direction TB
+            ServerAPI["MLflow Tracking Server"]:::service
+            App["Model Serving App"]:::service
+            VolArtifact["mlruns Volume"]:::volume
+            VolOutput["outputs Volume"]:::volume
+        end
+    end
+
+    %% External Client
+    Client["External Client"]:::client
+
+    %% Relationships
+    runsh -->|"mlflow run . --> HTTP POST /api/2.0/mlflow/runs/create"| ServerAPI
+    wine -->|uses data & code| runsh
+    df -->|notebook for exploration| runsh
+    mlproj -->|defines project| runsh
+    req -->|dependencies| runsh
+
+    dockerCompose -->|orchestrates| ServerAPI
+    dockerCompose -->|orchestrates| App
+    VolArtifact -->|mount /mlruns| ServerAPI
+    VolArtifact -->|mount /mlruns read-only| App
+    VolOutput -->|mount /outputs write| App
+
+    Client -->|HTTP POST /predict| App
+    App -->|HTTP response| Client
+
+    %% Click Events
+    click wine "https://github.com/fbarulli/mlflow/blob/main/wine_work.py"
+    click df "https://github.com/fbarulli/mlflow/blob/main/df.ipynb"
+    click mlproj "https://github.com/fbarulli/mlflow/tree/main/MLproject"
+    click runsh "https://github.com/fbarulli/mlflow/blob/main/run.sh"
+    click req "https://github.com/fbarulli/mlflow/blob/main/requirements.txt"
+    click dockerCompose "https://github.com/fbarulli/mlflow/blob/main/docker-compose.yml"
+    click ServerAPI "https://github.com/fbarulli/mlflow/blob/main/Dockerfile.server"
+    click App "https://github.com/fbarulli/mlflow/blob/main/Dockerfile.app"
+    click VolArtifact "https://github.com/fbarulli/mlflow/tree/main/mlruns/"
+    click VolOutput "https://github.com/fbarulli/mlflow/tree/main/outputs/"
+
+    %% Styles
+    classDef code fill:#DDEEFF,stroke:#0000FF,color:#0000FF;
+    classDef orchestrator fill:#F0F0F0,stroke:#999999,color:#666666;
+    classDef service fill:#E0FFE0,stroke:#008000,color:#006400;
+    classDef volume fill:#FFE0B2,stroke:#FF8C00,color:#A0522D;
+    classDef client fill:#F3E5F5,stroke:#800080,color:#4B0082;
