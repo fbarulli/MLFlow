@@ -1,6 +1,0 @@
-name: WineClassification
-
-
-entry_points:
-  main:
-    command: "python wine_work.py"
