@@ -5,6 +5,9 @@ echo "Stopping and removing all Docker containers..."
 docker-compose down --remove-orphans
 docker ps -a -q | xargs -r docker rm -f
 
+echo "Removing unused Docker resources..."
+docker system prune -a -f
+
 # Remove all Docker images
 echo "Removing all Docker images..."
 docker images -q | sort -u | xargs -r docker rmi -f
