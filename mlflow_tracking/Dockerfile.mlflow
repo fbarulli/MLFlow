@@ -1,0 +1,26 @@
+# mlflow_tracking/Dockerfile.mlflow
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    gcc \
+    build-essential \
+    pkg-config \
+    libgirepository1.0-dev \
+    libcairo2-dev \
+    libblas-dev \
+    liblapack-dev \
+    && rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir -r requirements.txt
+
+COPY mlflow/wine_work.py ./mlflow/
+
+ENV PYTHONUNBUFFERED=1
+
+VOLUME /app/outputs
+
+CMD ["python", "mlflow/wine_work.py"]
