@@ -1,22 +1,20 @@
-# mlflow_tracking/bentoml/service.py (Suggested modification)
-
+# mlflow_tracking/bentoml/service.py
 import bentoml
 from bentoml.io import JSON
 from pydantic import BaseModel, Field
 import pandas as pd
 import logging
 import traceback
-import os # Import os to read environment variable
+import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# --- (WineInput BaseModel remains the same) ---
 class WineInput(BaseModel):
     data: list[list[float]] = Field(..., min_items=1)
     columns: list[str] = Field(
         default=[
-            "fixed acidity", "volatile acidity", "citric acid", "residual sugar",
+            "fixed acidity", "volatile acidity", "citric acidity", "residual sugar",
             "chlorides", "free sulfur dioxide", "total sulfur dioxide", "density",
             "pH", "sulphates", "alcohol", "Id"
         ],
@@ -29,79 +27,106 @@ class WineInput(BaseModel):
             "example": {
                 "data": [[7.4, 0.7, 0.0, 1.9, 0.076, 11.0, 34.0, 0.9978, 3.51, 0.56, 9.4, 0]],
                 "columns": [
-                    "fixed acidity", "volatile acidity", "citric acid", "residual sugar",
+                    "fixed acidity", "volatile acidity", "citric acidity", "residual sugar",
                     "chlorides", "free sulfur dioxide", "total sulfur dioxide", "density",
                     "pH", "sulphates", "alcohol", "Id"
                 ]
             }
         }
 
+# Define the BentoML service. The name must match the service name used when serving.
 svc = bentoml.Service("wine_quality_service")
 
 # --- Load the model runner using the tag provided by the entrypoint ---
-# This happens when the service definition is loaded/built by bentoml
+# This happens when the service definition is loaded/built by bentoml.
+# The entrypoint.sh script is responsible for setting this environment variable.
 BENTOML_MODEL_TAG = os.environ.get("BENTOML_SERVE_MODEL_TAG")
 
 if not BENTOML_MODEL_TAG:
-    # Fallback or raise error if the env var isn't set (should be set by entrypoint)
-    logger.warning("BENTOML_SERVE_MODEL_TAG environment variable not set. Attempting to list models...")
-    available_models = bentoml.models.list()
-    if available_models:
-        # Load the first available model as a fallback (less reliable)
-        logger.warning(f"Using first available model as fallback: {available_models[0].tag}")
-        model_to_serve = available_models[0]
-    else:
-        logger.error("No BentoML model tag provided via environment variable, and no models found in local store.")
-        # Raise error during service loading if no model can be found
-        raise ValueError("No BentoML model tag specified for serving.")
+    # This indicates a configuration error in the entrypoint or deployment setup.
+    logger.error("BENTOML_SERVE_MODEL_TAG environment variable not set. Cannot load model.")
+    # Listing models here might help debugging, but the primary issue is the missing env var.
+    logger.info("Available models in BentoML store:")
+    try:
+        available_models = bentoml.models.list()
+        if available_models:
+            for model in available_models:
+                logger.info(f"  - {model.tag}")
+        else:
+             logger.info("  (No models found)")
+    except Exception as list_err:
+         logger.error(f"Error listing models: {str(list_err)}")
+
+    # Raise an error here during service definition loading.
+    # BentoML will catch this and the container startup will fail.
+    raise ValueError("BENTOML_SERVE_MODEL_TAG not set. Please ensure the entrypoint script sets this.")
 else:
     logger.info(f"Loading BentoML model with tag: {BENTOML_MODEL_TAG}")
     try:
+        # Load the model specified by the tag
         model_to_serve = bentoml.models.get(BENTOML_MODEL_TAG)
+        logger.info(f"Successfully loaded model: {model_to_serve.tag}")
     except bentoml.exceptions.NotFound:
-        logger.error(f"BentoML model with tag '{BENTOML_MODEL_TAG}' not found.")
+        logger.error(f"BentoML model with tag '{BENTOML_MODEL_TAG}' not found in the local store.")
+        logger.info("Available models in BentoML store:")
+        try:
+            available_models = bentoml.models.list()
+            if available_models:
+                for model in available_models:
+                    logger.info(f"  - {model.tag}")
+            else:
+                logger.info("  (No models found)")
+        except Exception as list_err:
+            logger.error(f"Error listing models: {str(list_err)}")
         # Raise error during service loading if the specified model isn't found
         raise ValueError(f"BentoML model '{BENTOML_MODEL_TAG}' not found.")
+    except Exception as e:
+        logger.error(f"Error loading BentoML model with tag '{BENTOML_MODEL_TAG}': {str(e)}")
+        logger.error(traceback.format_exc())
+        raise # Re-raise other exceptions during loading
 
 
 # Create the runner from the loaded model
+# This prepares the model for inference, potentially loading it into memory/GPU
 wine_runner = model_to_serve.to_runner()
 
 # Add the runner to the BentoML service
+# This makes the runner available to API functions
 svc.add_runner(wine_runner)
 
 
 @svc.api(input=JSON(pydantic_model=WineInput), output=JSON())
 async def predict(input_data: WineInput):
+    """
+    Prediction API endpoint.
+    Receives WineInput data, performs inference using the loaded model runner,
+    and returns the predicted wine quality labels.
+    """
     try:
+        # Convert the input Pydantic model data to a pandas DataFrame
+        # Ensure columns match the training data's expected feature order
         input_df = pd.DataFrame(input_data.data, columns=input_data.columns)
-        # Optional: Log input data - be cautious with sensitive data or high traffic
-        # logger.info(f"Received input shape: {input_df.shape}")
-        # logger.debug(f"Received input: {input_df.to_dict()}") # Use debug for potentially large inputs
-
-        # Use the runner added to the service
-        # The runner should be initialized by BentoML runtime
+        
+        # Use the runner to perform inference.
+        # The runner is added to the service and managed by the BentoML runtime.
+        # async_run is used because predict is an async api function
         predictions = await wine_runner.predict.async_run(input_df)
 
         logger.info(f"Generated {len(predictions)} predictions.")
-        # logger.debug(f"Predictions: {predictions.tolist()}") # Use debug for potentially large outputs
 
         # Convert predicted labels (0, 1, 2) back to quality names ("low", "medium", "high")
-        # This mapping needs to be accessible. You could store it as model metadata
-        # or retrieve it from MLflow artifacts/params associated with the model.
-        # For simplicity here, hardcode assuming the model always predicts 0, 1, or 2.
-        # A more robust solution retrieves this mapping dynamically.
+        # This mapping should ideally be stored with the model or derived from training data.
+        # For simplicity here, it's hardcoded.
+        # Ensure the predicted values are integers before mapping
         quality_map = {0: "low", 1: "medium", 2: "high"}
-        predicted_labels = [quality_map.get(int(p), "unknown") for p in predictions] # Handle potential non-integer predictions safely
+        # Use a default value like "unknown" if a prediction falls outside 0, 1, 2
+        predicted_labels = [quality_map.get(int(p), "unknown") for p in predictions] 
 
-
-        return {"predictions": predicted_labels} # Return labels as strings
+        # Return the predictions as a JSON object
+        return {"predictions": predicted_labels}
     except Exception as e:
         logger.error(f"Prediction failed: {str(e)}")
         logger.error(traceback.format_exc())
-        # Return an error response with status code 500 (handled by BentoML by raising Exception)
-        # Or return a JSON error payload and let BentoML handle status code
-        # Returning a dict with 'error' key is a common pattern, but won't set HTTP status
-        # To set status, raise web.HTTPException or similar depending on BentoML internal framework (Starlette)
-        # For now, let BentoML raise the default 500 for uncaught exceptions
-        raise # Re-raise the exception
+        # Re-raise the exception. BentoML will handle uncaught exceptions by
+        # returning a 500 Internal Server Error response.
+        raise
