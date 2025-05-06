@@ -1,0 +1,50 @@
+
+
+networks:
+  mlflow_network:
+    driver: bridge
+
+services:
+  mlflow_server:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: mlflow_tracking_server
+    ports:
+      - "5000:5000"
+    environment:
+      # Pass the backend URI variable from .env into the server container's environment
+      # This is needed by the command below
+      - MLFLOW_BACKEND_URI=${MLFLOW_BACKEND_URI}
+    command:
+      # --- CORRECTED: Use the MLFLOW_BACKEND_URI variable for --backend-store-uri ---
+      # Ensure artifact root is also a path/URI accessible by the server container
+      mlflow server --backend-store-uri ${MLFLOW_BACKEND_URI} --default-artifact-root /mlruns --host 0.0.0.0 --port 5000
+    volumes:
+      # Mount volumes for persistent storage
+      # mlruns_data named volume maps to /mlruns inside container (for artifacts)
+      # backend_data named volume maps to /mlflow_backend inside container (for the sqlite DB file)
+      - mlruns_data:/mlruns
+      - backend_data:/mlflow_backend # Volume where SQLite DB file will live
+    networks:
+      - mlflow_network
+    restart: unless-stopped
+
+  wine_training_app:
+    image: wine-mlflow-app
+    container_name: wine_training_app
+    environment:
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
+      - CONTAINER_APP_OUTPUT_DIR=${CONTAINER_APP_OUTPUT_DIR}
+    env_file:
+      - .env
+    volumes:
+      - ${HOST_APP_OUTPUT_DIR}:${CONTAINER_APP_OUTPUT_DIR}
+    networks:
+      - mlflow_network
+    depends_on:
+      - mlflow_server
+
+volumes:
+  mlruns_data:
+    driver: local
+  backend_data:
+    driver: local # Volume for backend data like sqlite DB

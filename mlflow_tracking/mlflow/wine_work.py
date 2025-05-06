@@ -20,8 +20,20 @@ import traceback
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+def get_pip_requirements(req_file_path):
+    if not os.path.exists(req_file_path):
+        logger.error(f"Requirements file not found at: {req_file_path}")
+        raise FileNotFoundError(f"Requirements file not found at: {req_file_path}")
+    with open(req_file_path, 'r') as f:
+        requirements = [line.strip() for line in f if line.strip() and not line.strip().startswith('#')]
+    return requirements
+
 def setup_environment():
-    output_dir = "/app/outputs"
+    output_dir = os.getenv("CONTAINER_APP_OUTPUT_DIR")
+    if not output_dir:
+         logger.error("CONTAINER_APP_OUTPUT_DIR environment variable is not set.")
+         raise ValueError("CONTAINER_APP_OUTPUT_DIR environment variable is not set.")
+
     os.makedirs(output_dir, exist_ok=True)
     logger.info(f"Outputs folder created at {output_dir}")
 
@@ -280,7 +292,6 @@ def log_model_to_mlflow(model, model_name, params, report_dict, X_train, X_test,
                  metrics[f"f1-score_{label_name}"] = report_dict[label_key].get("f1-score")
                  metrics[f"support_{label_name}"] = report_dict[label_key].get("support")
 
-
             metrics = {k: v for k, v in metrics.items() if v is not None}
 
             if metrics:
@@ -316,13 +327,24 @@ def log_model_to_mlflow(model, model_name, params, report_dict, X_train, X_test,
                 logger.error(traceback.format_exc())
 
         registered_model_name = f"tracking-wine-{model_name.lower()}"
+
+        container_req_path = "/app/requirements.txt"
+        try:
+             pip_requirements = get_pip_requirements(container_req_path)
+             logger.info(f"Read {len(pip_requirements)} requirements from {container_req_path}")
+        except Exception as req_err:
+             logger.error(f"Failed to read pip requirements: {req_err}")
+             logger.error(traceback.format_exc())
+             raise
+
         try:
             model_info = mlflow.sklearn.log_model(
                 sk_model=model,
                 artifact_path=f"{model_name.lower()}_model",
                 signature=signature,
                 input_example=input_example,
-                registered_model_name=registered_model_name
+                registered_model_name=registered_model_name,
+                pip_requirements=pip_requirements
             )
             logger.info(f"Model {model_name} logged to MLflow run artifact '{model_info.artifact_path}' and registered as '{registered_model_name}'.")
 
@@ -333,7 +355,9 @@ def log_model_to_mlflow(model, model_name, params, report_dict, X_train, X_test,
             logger.error(traceback.format_exc())
             raise
 
+    # --- CORRECTED CALL TO save_predictions ---
         save_predictions(model, X_test, y_test, wine_feature_names, model_name, output_dir)
+    # --- save_model_plots call was already correct ---
         save_model_plots(model, model_name, wine_feature_names, quality_order, output_dir)
 
         logger.info(f"MLflow logging completed for {model_name}.")
