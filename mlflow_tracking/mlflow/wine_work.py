@@ -227,7 +227,7 @@ def transition_model_to_staging(registered_model_name):
         client = MlflowClient()
         logger.info(f"Attempting to assign 'Staging' alias to latest version of '{registered_model_name}'")
 
-        latest_versions = client.get_latest_versions(name=registered_model_name)
+        latest_versions = client.search_model_versions(f"name='{registered_model_name}'")
 
         if not latest_versions:
             logger.warning(f"No 'latest' version found for registered model '{registered_model_name}'. Cannot set alias.")
@@ -238,13 +238,14 @@ def transition_model_to_staging(registered_model_name):
         logger.info(f"Latest version found is {latest_version_number} (Run ID: {latest_version.run_id}).")
 
         try:
-            versions_with_current_alias = client.get_latest_versions(name=registered_model_name, aliases=["Staging"])
+            versions_with_current_alias = client.search_model_versions(f"name='{registered_model_name}' and aliases='Staging'")
             for version_with_alias in versions_with_current_alias:
                 if version_with_alias.version != latest_version_number:
                      logger.info(f"Removing 'Staging' alias from version {version_with_alias.version}")
-                     client.delete_registered_model_alias(
+                     client.set_registered_model_alias(
                          name=registered_model_name,
-                         alias="Staging"
+                         alias="Staging",
+                         version="1"
                      )
         except Exception as remove_alias_err:
              logger.warning(f"Could not remove existing 'Staging' alias: {remove_alias_err}")

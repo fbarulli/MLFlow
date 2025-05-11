@@ -4,4 +4,6 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir mlflow==2.22.0 psycopg2-binary==2.9.9
 RUN mkdir -p /mlflow/artifacts
 EXPOSE 5000
+ENV MLFLOW_BACKEND_URI=postgresql+psycopg2://mlflow:mlflow@mlflow_db:5432/mlflow
+ENV MLFLOW_DEFAULT_ARTIFACT_ROOT=/mlflow/artifacts
 CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "5000", "--backend-store-uri", "$MLFLOW_BACKEND_URI", "--default-artifact-root", "$MLFLOW_DEFAULT_ARTIFACT_ROOT"]
