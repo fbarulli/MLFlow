@@ -355,9 +355,9 @@ def log_model_to_mlflow(model, model_name, params, report_dict, X_train, X_test,
             logger.error(traceback.format_exc())
             raise
 
-    # --- CORRECTED CALL TO save_predictions ---
+    
         save_predictions(model, X_test, y_test, wine_feature_names, model_name, output_dir)
-    # --- save_model_plots call was already correct ---
+    
         save_model_plots(model, model_name, wine_feature_names, quality_order, output_dir)
 
         logger.info(f"MLflow logging completed for {model_name}.")

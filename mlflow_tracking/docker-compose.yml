@@ -1,50 +1,65 @@
 
+services:
+  mlflow_db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=mlflow
+      - POSTGRES_PASSWORD=mlflow
+      - POSTGRES_DB=mlflow
+    volumes:
+      - mlflow_db_data:/var/lib/postgresql/data
+    networks:
+      - mlflow_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mlflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mlflow_server:
+    image: mlflow_server
+    build:
+      context: .
+      dockerfile: Dockerfile.mlflow
+    ports:
+      - "5000:5000"
+    environment:
+      - MLFLOW_BACKEND_URI=postgresql+psycopg2://mlflow:mlflow@mlflow_db:5432/mlflow
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=/mlflow/artifacts
+    volumes:
+      - ./mlflow_artifacts:/mlflow/artifacts
+    depends_on:
+      mlflow_db:
+        condition: service_healthy
+    networks:
+      - mlflow_network
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:5000 || exit 1"]
+      interval: 60s
+      timeout: 30s
+      retries: 5
+      start_period: 60s
+
+  wine_app:
+    image: wine_quality_app
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow_server:5000
+      - CONTAINER_APP_OUTPUT_DIR=/app/outputs
+    volumes:
+      - ./wine_outputs:/app/outputs
+    depends_on:
+      mlflow_server:
+        condition: service_healthy
+    networks:
+      - mlflow_network
+
+volumes:
+  mlflow_db_data:
+  mlflow_artifacts:
 
 networks:
   mlflow_network:
     driver: bridge
-
-services:
-  mlflow_server:
-    image: ghcr.io/mlflow/mlflow:latest
-    container_name: mlflow_tracking_server
-    ports:
-      - "5000:5000"
-    environment:
-      # Pass the backend URI variable from .env into the server container's environment
-      # This is needed by the command below
-      - MLFLOW_BACKEND_URI=${MLFLOW_BACKEND_URI}
-    command:
-      # --- CORRECTED: Use the MLFLOW_BACKEND_URI variable for --backend-store-uri ---
-      # Ensure artifact root is also a path/URI accessible by the server container
-      mlflow server --backend-store-uri ${MLFLOW_BACKEND_URI} --default-artifact-root /mlruns --host 0.0.0.0 --port 5000
-    volumes:
-      # Mount volumes for persistent storage
-      # mlruns_data named volume maps to /mlruns inside container (for artifacts)
-      # backend_data named volume maps to /mlflow_backend inside container (for the sqlite DB file)
-      - mlruns_data:/mlruns
-      - backend_data:/mlflow_backend # Volume where SQLite DB file will live
-    networks:
-      - mlflow_network
-    restart: unless-stopped
-
-  wine_training_app:
-    image: wine-mlflow-app
-    container_name: wine_training_app
-    environment:
-      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
-      - CONTAINER_APP_OUTPUT_DIR=${CONTAINER_APP_OUTPUT_DIR}
-    env_file:
-      - .env
-    volumes:
-      - ${HOST_APP_OUTPUT_DIR}:${CONTAINER_APP_OUTPUT_DIR}
-    networks:
-      - mlflow_network
-    depends_on:
-      - mlflow_server
-
-volumes:
-  mlruns_data:
-    driver: local
-  backend_data:
-    driver: local # Volume for backend data like sqlite DB
