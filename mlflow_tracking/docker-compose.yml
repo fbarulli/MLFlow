@@ -56,6 +56,21 @@ services:
     networks:
       - mlflow_network
 
+  bentoml:
+    build:
+      context: ./bentoml
+      dockerfile: Dockerfile
+    image: bentoml_service
+    ports:
+      - "8000:8000"
+    environment:
+      - BENTOML_SERVE_MODEL_TAG=tracking-wine-logisticregression:latest
+    depends_on:
+      mlflow_server:
+        condition: service_healthy
+    networks:
+      - mlflow_network
+
 volumes:
   mlflow_db_data:
   mlflow_artifacts:

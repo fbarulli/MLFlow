@@ -82,4 +82,6 @@ def update_model_metadata():
         raise
 
 if __name__ == "__main__":
+    with open("/app/outputs/model_metadata_ran.txt", "w") as f:
+        f.write("model_metadata.py ran successfully")
     update_model_metadata()
